@@ -1,0 +1,211 @@
+.main {
+    max-inline-size: 1100px;
+    padding-inline-start: 30px;
+    padding-inline-end: 30px;
+
+    margin-block-start: 140px;
+    margin-block-end: 100px;
+
+    /* margin-inline-start: auto;
+       margin-right auto;
+       Is a trick for centering an element horizontally
+       without needing a container. */
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+}
+
+.page-title {
+    font-weight: 700;
+    font-size: 22px;
+    margin-block-end: 18px;
+}
+
+.checkout-grid {
+    display: grid;
+    /* Here, 1fr means the first column will take
+       up the remaining space in the grid. */
+    grid-template-columns: 1fr 350px;
+    column-gap: 12px;
+
+    /* Use align-items: start; to prevent the elements
+       in the grid from stretching vertically. */
+    align-items: start;
+}
+
+@media (max-inline-size: 1000px) {
+    .main {
+        max-inline-size: 500px;
+    }
+
+    .checkout-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cart-item-container,
+.payment-summary {
+    border: 1px solid rgb(222, 222, 222);
+    border-radius: 4px;
+    padding: 18px;
+}
+
+.cart-item-container {
+    margin-block-end: 12px;
+}
+
+.payment-summary {
+    padding-block-end: 5px;
+}
+
+@media (max-width: 1000px) {
+    .payment-summary {
+        /* grid-row: 1 means this element will be placed into row
+        1 in the grid. (Normally, the row that an element is
+        placed in is determined by the order of the elements in
+        the HTML. grid-row overrides this default ordering). */
+        grid-row: 1;
+        margin-block-end: 12px;
+    }
+}
+
+.delivery-date {
+    color: rgb(0, 118, 0);
+    font-weight: 700;
+    font-size: 19px;
+    margin-block-start: 5px;
+    margin-block-end: 22px;
+}
+
+.cart-item-details-grid {
+    display: grid;
+    /* 100px 1fr 1fr; means the 2nd and 3rd column will
+       take up half the remaining space in the grid
+       (they will divide up the remaining space evenly). */
+    grid-template-columns: 100px 1fr 1fr;
+    column-gap: 25px;
+}
+
+@media (max-width: 1000px) {
+    .cart-item-details-grid {
+        grid-template-columns: 100px 1fr;
+        row-gap: 30px;
+    }
+}
+
+.product-image {
+    max-inline-size: 100%;
+    max-block-size: 120px;
+
+    /* margin-inline-start: auto;
+       margin-right auto;
+       Is a trick for centering an element horizontally
+       without needing a container. */
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+}
+
+.product-name {
+    font-weight: 700;
+    margin-block-end: 8px;
+}
+
+.product-price {
+    color: rgb(177, 39, 4);
+    font-weight: 700;
+    margin-block-end: 5px;
+}
+
+.product-quantity .link-primary {
+    margin-inline-start: 3px;
+}
+
+@media (max-inline-size: 1000px) {
+    .delivery-options {
+        /* grid-column: 1 means this element will be placed
+         in column 1 in the grid. (Normally, the column that
+         an element is placed in is determined by the order
+         of the elements in the HTML. grid-column overrides
+         this default ordering).
+         
+         / span 2 means this element will take up 2 columns
+         in the grid (Normally, each element takes up 1
+         column in the grid). */
+        grid-column: 1 / span 2;
+    }
+}
+
+.delivery-options-title {
+    font-weight: 700;
+    margin-block-end: 10px;
+}
+
+.delivery-option {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    margin-block-end: 12px;
+    cursor: pointer;
+}
+
+.delivery-option-input {
+    margin-inline-start: 0px;
+    cursor: pointer;
+}
+
+.delivery-option-date {
+    color: rgb(0, 118, 0);
+    font-weight: 500;
+    margin-block-end: 3px;
+}
+
+.delivery-option-price {
+    color: rgb(120, 120, 120);
+    font-size: 15px;
+}
+
+.payment-summary-title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-block-end: 12px;
+}
+
+.payment-summary-row {
+    display: grid;
+    /* 1fr auto; means the width of the 2nd column will be
+       determined by the elements inside the column (auto).
+       The 1st column will take up the remaining space. */
+    grid-template-columns: 1fr auto;
+
+    font-size: 15px;
+    margin-block-end: 9px;
+}
+
+.payment-summary-money {
+    text-align: end;
+}
+
+.subtotal-row .payment-summary-money {
+    border-block-start: 1px solid rgb(222, 222, 222);
+}
+
+.subtotal-row div {
+    padding-block-start: 9px;
+}
+
+.total-row {
+    color: rgb(177, 39, 4);
+    font-weight: 700;
+    font-size: 18px;
+
+    border-block-start: 1px solid rgb(222, 222, 222);
+    padding-block-start: 18px;
+}
+
+.place-order-button {
+    inline-size: 100%;
+    padding-block-start: 12px;
+    padding-block-end: 12px;
+    border-radius: 8px;
+
+    margin-block-start: 11px;
+    margin-block-end: 15px;
+}

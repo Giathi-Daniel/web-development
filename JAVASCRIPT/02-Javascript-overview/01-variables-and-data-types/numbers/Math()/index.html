@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math functions</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Emoji<br />Fighter</h1>
+    <div id="stage"></div>
+    <button id="fightButton">Pick Fighters!</button>
+    <script src="index.js"></script>
+
+    <script>
+      let fighters = [
+        "🐉",
+        "🐥",
+        "🐊",
+        "💩",
+        "🦍",
+        "🐢",
+        "🐩",
+        "🦭",
+        "🦀",
+        "🐝",
+        "🤖",
+        "🐘",
+        "🐸",
+        "🕷",
+        "🐆",
+        "🦕",
+        "🦁",
+      ];
+
+      let stageEl = document.getElementById("stage");
+      let fightButton = document.getElementById("fightButton");
+
+      fightButton.addEventListener("click", function () {
+        // When the user clicks on the "Pick Fighters" button, pick two random
+        let randomIndexOne = Math.floor(Math.random() * fighters.length);
+        let randomIndexTwo = Math.floor(Math.random() * fighters.length);
+        stageEl.textContent =
+          fighters[randomIndexOne] + " vs " + fighters[randomIndexTwo];
+      });
+    </script>
+  </body>
+</html>

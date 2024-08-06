@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <!-- INTER FONT LINK -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | News homepage</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- =============== HEADER START =============== -->
+    <header>
+      <div class="container header_container">
+        <div class="logo">
+          <h1>W.</h1>
+        </div>
+        <ul class="nav-items">
+          <li><a href="#home"></a>Home</li>
+          <li><a href="#new"></a>New</li>
+          <li><a href="#popular"></a>Popular</li>
+          <li><a href="#trending"></a>Trending</li>
+          <li><a href="#categories"></a>Categories</li>
+        </ul>
+        <div class="menu">
+          <img
+            src="./assets/images/icon-menu.svg"
+            id="menuOpen"
+            class="menu_open"
+            alt=""
+          />
+          <img
+            src="./assets/images/icon-menu-close.svg"
+            id="menuClose"
+            alt=""
+          />
+        </div>
+      </div>
+    </header>
+
+    <!-- =============== HERO START =============== -->
+    <section id="new">
+      <div class="container hero_container">
+        <div class="hero_left">
+          <div class="img_container">
+            <img src="./assets/images/image-web-3-desktop.jpg" alt="" />
+          </div>
+          <div class="hero_text">
+            <h1>The Bright Future of Web 3.0?</h1>
+            <div class="hero_desc">
+              <p>
+                We dive into the next evolution of the web that claims to put
+                the power of the platforms back into the hands of the people.
+                But is it really fulfilling its promise?
+              </p>
+              <button class="btn">READ MORE</button>
+            </div>
+          </div>
+        </div>
+        <div class="hero_right">
+          <h2>New</h2>
+          <article>
+            <h4>New Hydrogen VS Electric Cars</h4>
+            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </article>
+          <article>
+            <h4>The Downsides of AI Artistry</h4>
+            <p>
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </article>
+          <article>
+            <h4>Is VC Funding Drying Up?</h4>
+            <p>
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== FEATURES START =============== -->
+    <section id="popular">
+      <div class="container popular_container">
+        <div class="popular_item">
+          <div class="popular_img">
+            <img src="./assets/images/image-retro-pcs.jpg" alt="" />
+          </div>
+          <div class="popular_text">
+            <h3>01</h3>
+            <a>Reviving Retro PCs</a>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </div>
+        <div class="popular_item">
+          <div class="popular_img">
+            <img
+              src="./assets/images/image-top-laptops.jpg"
+              style="block-size: 200px"
+              alt=""
+            />
+          </div>
+          <div class="popular_text">
+            <h3>02</h3>
+            <a>Top 10 Laptops of 2022</a>
+            <p>Our best picks for various needs and budgets.</p>
+          </div>
+        </div>
+        <div class="popular_item">
+          <div class="popular_img">
+            <img src="./assets/images/image-gaming-growth.jpg" alt="" />
+          </div>
+          <div class="popular_text">
+            <h3>03</h3>
+            <a>The Growth of Gaming</a>
+            <p>How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== FOOTER START =============== -->
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">BLACKSHARK</a>.
+      </div>
+    </footer>
+
+    <!-- ===== JAVSCRIPT ==== -->
+    <script src="./script.js"></script>
+  </body>
+</html>

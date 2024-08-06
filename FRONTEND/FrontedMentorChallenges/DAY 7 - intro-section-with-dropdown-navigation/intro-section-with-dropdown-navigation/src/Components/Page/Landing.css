@@ -1,0 +1,37 @@
+.page_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 5rem;
+    block-size: 90vh;
+    margin-block-start: 1rem;
+}
+
+.make {
+    display: block;
+}
+
+.page_right h1 {
+    font-size: 4rem;
+    line-height: 1;
+}
+
+.page_left {
+    inline-size: 100%;
+    /* overflow: hidden; */
+    block-size: 100%;
+    margin-block: -4rem;
+    position: relative;
+}
+
+.page_left img {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: contain;
+}
+
+p {
+    margin-block: 2rem;
+    font-size: .9rem;
+    max-inline-size: 300px;
+    line-height: 1.5;
+}

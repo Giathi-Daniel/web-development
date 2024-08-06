@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Octagon Menu</title>
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/4d1c965a0a.js"></script>
+  </head>
+  <body>
+    <ul class="menu">
+      <div class="menuToggle">
+        <i class="fas fa-plus" style="margin-top: 10px"></i>
+      </div>
+      <li style="--i: 0; --clr: #ff2972">
+        <a href="#"><i class="fas fa-house"></i></a>
+      </li>
+      <li style="--i: 1; --clr: #fee800">
+        <a href="#"><i class="fas fa-user"></i></a>
+      </li>
+      <li style="--i: 2; --clr: #04fc43">
+        <a href="#"><i class="fas fa-gear"></i></a>
+      </li>
+      <li style="--i: 3; --clr: #fed0f1">
+        <a href="#"><i class="fas fa-envelope"></i></a>
+      </li>
+      <li style="--i: 4; --clr: #00b0fe">
+        <a href="#"><i class="fas fa-magnifying-glass"></i></a>
+      </li>
+      <li style="--i: 5; --clr: #fea600">
+        <a href="#"><i class="fas fa-github"></i></a>
+      </li>
+      <li style="--i: 6; --clr: #a529ff">
+        <a href="#"><i class="fas fa-video"></i></a>
+      </li>
+      <li style="--i: 7; --clr: #01bdab">
+        <a href="#"><i class="fas fa-shopping-basket"></i></a>
+      </li>
+    </ul>
+
+    <script>
+      let menuToggle = document.querySelector(".menuToggle");
+      let menu = document.querySelector(".menu");
+      menuToggle.onclick = function () {
+        menu.classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>

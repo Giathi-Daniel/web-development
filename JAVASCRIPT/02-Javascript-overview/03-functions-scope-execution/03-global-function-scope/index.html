@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global and Function Scope</title>
+</head>
+<body>
+    
+    <h1>Global and Function Scope</h1>
+
+    
+    <script>
+        // alert('hello')
+        // alert(window.innerWidth)
+
+        const x = 100 //global variable
+
+        console.log(x, 'in global');
+
+        function run(){
+            console.log(window.innerHeight)
+            console.log(x, 'in function')
+        } 
+        
+        run();
+
+        function add(){
+            const x =1;
+            const y = 50; //local variable
+            console.log(y + x);
+        }
+        
+        add();
+    </script>
+</body>
+</html>

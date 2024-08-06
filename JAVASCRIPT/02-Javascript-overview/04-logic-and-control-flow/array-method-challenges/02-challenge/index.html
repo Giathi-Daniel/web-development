@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter</title>
+</head>
+<body>
+    <h1>Array method challenge</h1>
+
+    <!-- Instructions
+        - add all positive numbers in the array
+    -->
+
+    <script>
+        const numbers = [2, -30, 50, 20, -12, -9, 7];
+
+        const positiveSum = numbers.filter(num => num > 0)
+        .reduce((acc, cur) => acc + cur, 0)
+        // const positiveSum = numbers.reduce((acc, sum) => {
+        //     (acc > 0) + sum
+        // })
+
+        console.log(positiveSum) // 79
+    </script>
+</body>
+</html>

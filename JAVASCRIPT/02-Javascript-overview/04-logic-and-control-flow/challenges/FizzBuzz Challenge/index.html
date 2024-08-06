@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+</head>
+<body>
+    <h1>FizzBuzz Challenge</h1>
+
+    <!-- Instructions
+        - Print numbers fom 1 to 100
+        - For multiples of three print 'Fizz' instead of numbers
+        - For multiples of five print 'Buzz' instead of numbers
+        - For numbers which are multiples of both three and five print 'FizzBuzz'
+    -->
+
+    <script>
+        // sln1
+        // for (let i = 1; i <=100; i++) {
+        //     console.log(i)
+
+        //     if (i % 15 === 0) {
+        //         console.log('FizzBuzz')
+        //     } else if(i % 3 === 0) {
+        //         console.log('Fizz')
+        //     } else if (i % 5 === 0) {
+        //         console.log('Buzzz')
+        //     } else {
+        //         console.log(i)
+        //     }
+        // }
+
+        // sln2
+        let j = 1;
+        while(j <= 100) {
+            if (j % 15 === 0) {
+                console.log('FizzBuzz')
+            } else if(j % 3 === 0) {
+                console.log('Fizz')
+            } else if (j % 5 === 0) {
+                console.log('Buzzz')
+            } else {
+                console.log(j)
+            }
+            j++;
+        }
+    </script>
+</body>
+</html>

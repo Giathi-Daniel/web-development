@@ -1,0 +1,126 @@
+/* GENERAL STYLING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+}
+
+:root {
+    --Blue: hsl(246, 80%, 60%);
+    --Light-red-work: hsl(15, 100%, 70%);
+    --Soft-blue-play: hsl(195, 74%, 62%);
+    --Light-red-study: hsl(348, 100%, 68%);
+    --Lime-green-exercise: hsl(145, 58%, 55%);
+    --Violet-social: hsl(264, 64%, 52%);
+    --Soft-orange-self-care: hsl(43, 84%, 65%);
+
+
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+
+    --transition: all 400ms ease;
+}
+
+body {
+    color: #ccc;
+    background: rgba(255, 255, 255, 1);
+    line-height: 1.4;
+    /* font-size: 18px; */
+    font-family: "Rubik", sans-serif;
+}
+
+.container {
+    margin: 15rem auto;
+    background: var(--Very-dark-blue);
+    padding: 7rem 4rem;
+    inline-size: 70%;
+}
+
+/* User Profile */
+.time_preview {
+    margin: 3rem 3rem;
+    display: grid;
+    grid-template-columns: 15% auto;
+    gap: 2rem;
+    inline-size: 100%;
+    block-size: auto;
+    padding-inline-end: 6rem;
+}
+
+.user_profile {
+    background: var(--Dark-blue);
+    border-radius: .7rem;
+    padding: 1rem;
+    position: relative;
+    block-size: auto;
+}
+
+.user_detaiis {
+    background: var(--Blue);
+    block-size: 60%;
+    border-radius: .7rem;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    padding: 1rem;
+    block-size: auto;
+}
+
+.user_image {
+    inline-size: 5rem;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+.user_description {
+    margin-block-start: 1.4rem;
+    margin-block-end: 3rem;
+}
+
+.user_description h1 {
+    font-weight: 300;
+}
+
+.user_data {
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+.user_data a {
+    color: #9f87fc;
+    font-size: 1.1rem;
+    transition: var(--transition);
+}
+
+.user_data a:hover {
+    color: #fff;
+}
+
+.user_time-checkup {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.7rem;
+}
+
+.user_report-weekly {
+    background: var(--Light-red-work);
+    border-radius: .7rem;
+    padding: 1rem;
+}
+
+/* FOOTER */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

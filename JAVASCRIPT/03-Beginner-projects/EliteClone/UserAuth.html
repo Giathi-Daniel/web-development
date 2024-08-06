@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg" href="/logo.svg" />
+    <title>Advanced Writers Writers: Sign Up</title>
+    <!-- *** BOOTSTRAP ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="Assests/styles.css" />
+    <link rel="stylesheet" href="Assests/userAuth.css" />
+  </head>
+  <body>
+    <!-- ========================== NAVIGATION ============================= -->
+    <nav class="container">
+      <div class="nav_container">
+        <a href="#" class="logo">
+          <img src="logo.svg" alt="" />
+          <span>Advanced Writers</span>
+        </a>
+        <ul class="nav_links">
+          <li><a href="index.html">Orders</a></li>
+          <li><a href="assigned.html">Assigned</a></li>
+        </ul>
+        <a href="account.html" class="account_btn">Account</a>
+        <div class="nav_btns">
+          <a href="#notification" class="notifications">
+            <i class="fa-regular fa-bell"></i>
+            <span>0</span>
+          </a>
+          <div class="menu_btn">
+            <i class="fa fa-bars" id="openMenu"></i>
+            <i class="fa fa-close" id="closeMenu"></i>
+          </div>
+          <a href="./UserAuth.html" class="btn_auth">Logout</a>
+        </div>
+      </div>
+    </nav>
+    <!-- ========================== NAVIGATION END============================= -->
+
+    <!-- ========================== FORM ============================= -->
+    <form action="https://formspree.io/f/xeqyrnvb" method="POST">
+      <div class="container_form">
+        <div class="sign-up">
+          <div class="container form_container">
+            <div class="form_option">
+              <h1>Welcome Back!</h1>
+              <p>
+                To keep connected with us please login with your personal info
+              </p>
+              <a href="index.html"><input type="submit" value="Sign In" /></a>
+            </div>
+            <div class="form_main">
+              <h2>Sign up</h2>
+              <div class="form_input">
+                <label for="Name">Name</label>
+                <input type="text" name="Name" id="Name" required />
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required />
+              </div>
+              <div class="form_input">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="+254" required />
+                <label for="ID">National ID</label>
+                <input type="text" id="ID" required />
+              </div>
+              <label for="password">Password</label>
+              <input type="password" name="PWD" id="password" required />
+              <label for="confirm">Confirm Password</label>
+              <input type="password" name="PWD" id="confirm" required />
+              <input type="submit" value="Register" />
+            </div>
+          </div>
+        </div>
+
+        <!-- **************** SIGN IN **************** -->
+        <div class="sign-in">
+          <div class="container form_container">
+            <div class="form_main">
+              <h2>Sign in</h2>
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" required />
+              <label for="password">Password</label>
+              <input type="password" name="PWD" id="password" required />
+              <div class="sign-in_actions">
+                <div class="check">
+                  <input type="checkbox" />
+                  <span>Remember me</span>
+                </div>
+                <p>Forgot password?</p>
+              </div>
+              <input type="submit" value="Sign in" />
+            </div>
+            <div class="form_option">
+              <h1>Hello!</h1>
+              <p>Enter your personal details and start journey with us</p>
+              <input type="submit" value="Sign Up" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <!-- ========================== FORM END============================= -->
+
+    <!-- ========================== FOOTER ============================= -->
+    <footer>
+      <div class="container footer_container">
+        <div class="company">
+          <div class="logo">
+            <img src="logo.svg" />
+            <span>Advanced Writers</span>
+          </div>
+          <a href="#" target="_blank">
+            <img
+              alt="Get it on Google Play"
+              src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+            />
+          </a>
+        </div>
+        <div class="useful_links">
+          <h2>Resources</h2>
+          <a href="#">Blog</a>
+          <a href="#">Contact Us</a>
+          <a href="#">FAQ</a>
+        </div>
+        <div class="useful_links">
+          <h2>Legal</h2>
+          <a href="#">Copyright</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+        <div class="useful_links">
+          <h2>Resources</h2>
+          <div class="social_links">
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+        </div>
+      </div>
+      <div class="credit">
+        <p>&copy; Copyright 2024 ProseWriting. All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- ========================== FOOTER END============================= -->
+
+    <!-- ========================== JS LINK ============================= -->
+    <script src="main.js"></script>
+  </body>
+</html>

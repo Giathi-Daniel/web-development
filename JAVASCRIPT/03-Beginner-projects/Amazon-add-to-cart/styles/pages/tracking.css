@@ -1,0 +1,81 @@
+.main {
+    max-inline-size: 850px;
+    margin-block-start: 90px;
+    margin-block-end: 100px;
+    padding-inline-start: 30px;
+    padding-inline-end: 30px;
+
+    /* margin-inline-start: auto;
+       margin-right auto;
+       Is a trick for centering an element horizontally
+       without needing a container. */
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+}
+
+.back-to-orders-link {
+    display: inline-block;
+    margin-block-end: 30px;
+}
+
+.delivery-date {
+    font-size: 25px;
+    font-weight: 700;
+    margin-block-end: 10px;
+}
+
+.product-info {
+    margin-block-end: 3px;
+}
+
+.product-image {
+    max-inline-size: 150px;
+    max-block-size: 150px;
+    margin-block-start: 25px;
+    margin-block-end: 50px;
+}
+
+.progress-labels-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 500;
+    margin-block-end: 15px;
+}
+
+.current-status {
+    color: rgb(6, 125, 98);
+}
+
+@media (max-inline-size: 575px) {
+    .progress-labels-container {
+        font-size: 16px;
+    }
+}
+
+@media (max-inline-size: 450px) {
+    .progress-labels-container {
+        flex-direction: column;
+        margin-block-end: 5px;
+    }
+
+    .progress-label {
+        margin-block-end: 3px;
+    }
+}
+
+.progress-bar-container {
+    block-size: 25px;
+    inline-size: 100%;
+
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    block-size: 100%;
+    background-color: green;
+    border-radius: 50px;
+    inline-size: 50%;
+}

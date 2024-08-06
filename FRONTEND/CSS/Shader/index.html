@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubism</title>
+    <link rel="stylesheet" href="stylea.css">
+</head>
+<body>
+    
+    
+
+    <canvas id="canvas"></canvas>
+<textarea id="codeEditor" class="editor" spellcheck="false" autocorrect="off" autocapitalize="off" translate="no" oninput="render()"></textarea>
+<pre id="error"></pre>
+<div id="indicator"></div>
+<div id="controls">
+  <div class="controls">
+    <input id="btnToggleView" class="icon" type="checkbox" name="toggleView" onclick="toggleView()">
+    <input id="btnToggleResolution" class="icon" type="checkbox" name="toggleResolution" onchange="toggleResolution()">
+    <input id="btnReset" class="icon" type="checkbox" name="reset" onclick="reset()">
+  </div>
+</div>
+
+
+
+<script type="x-shader/x-fragment">
+        precision highp float;
+        out vec4 O;
+        uniform float time;
+        uniform vec2 resolution;
+        uniform vec2 touch;
+        uniform int pointerCount;
+        #define mouse (touch/R)
+        #define P pointerCount
+        #define FC gl_FragCoord.xy
+        #define R resolution
+        #define T (2.*time)
+        #define S smoothstep
+        #define N normalize
+        #define rot(a) mat2(cos(a-vec4(0,11,33,0)))
+        void cam(inout vec3 p) {
+            if (P>0) {
+                p.yz*=rot(-mouse.y*6.3+3.14);
+                p.xz*=rot(3.14-mouse.x*6.3);
+            } else {
+                p.yz*=rot(exp(sin(T*.125)*.5-.6)*1.5);
+                p.xz*=rot(T*.2+sin(T*.1)*.5);
+            }
+        }
+        vec2 rnd(float a) {
+            vec3 p=fract(a*vec3(234.56,264.98,301.34));
+            p+=dot(p,p+34.56);
+            return fract(vec2(p.x*p.y,p.y*p.z));
+        }
+        vec3 pattern(vec2 uv, float t) {
+            const float steps=30.;
+            float d=1., e=.0;
+            for (float i=.0; i++<steps;) {
+                vec2 n=rnd(i), p=sin(n*t+t*.2);
+                float f=dot(uv-p, uv-p);
+                if (d>f) {
+                    d=f;
+                    e=i;
+                }
+            }
+            return vec3(e/steps);
+        }
+        vec2 pmod(vec2 p, float n) {
+            float
+            a=atan(p.x,p.y),
+            b=6.28318/n;
+            a=floor(.5+a/b)*b;
+            return rot(-a)*p;
+        }
+        float tor(vec3 p, vec2 s) {
+            vec2 c=vec2(length(p.xz)-s.x, p.y);
+            return length(c)-s.y;
+        }
+        float disc(vec3 p, vec2 s) {
+            vec2 c=vec2(length(p)-s.x, abs(p.y)-s.y);
+            return length(max(c,.0))+min(.0,max(c.x,c.y));
+        }
+        float box(vec3 p, vec3 s) {
+            p=abs(p)-s;
+            return length(max(p,.0))+min(.0,max(max(p.x,p.y),p.z));
+        }
+        float rod(vec3 p, vec2 s) {
+            p.y-=clamp(p.y,-s.y*.5,s.y*.5);
+            return length(p)-s.x;
+        }
+        vec3 smin(vec3 a, vec3 b, float k) {
+            vec3 h=clamp(.5+.5*(b-a)/k,.0,1.);
+            return mix(b,a,h)-k*h*(1.-h);
+        }
+        float oct(vec3 p, float s) {
+            p=smin(p,-p,-.05);
+            return (p.x+p.y+p.z-s)*(1./sqrt(3.));
+        }
+        float smin(float a, float b, float k) {
+            float h=clamp(.5+.5*(b-a)/k,.0,1.);
+            return mix(b,a,h)-k*h*(1.-h);
+        }
+        float gem(vec3 p, float s) {
+            const float w=.78539816, sn=sin(w), cs=cos(w);
+            const mat2 m=mat2(cs,-sn,sn,cs);
+            vec3 q=p;
+            q.xz*=m;
+            float
+            a=max(smin(smin(oct(p,s),oct(q,s),-.0125),(q.y-.2),-.0125),-(p.y+.6)),
+            b=tor(p-vec3(0,-.7,0),vec2(.2,.1));
+            return min(a,b);
+        }
+        vec2 map(vec3 p) {
+            p.y+=.5;
+            vec3 q=p;
+            q.xz=pmod(q.xz, 3.);
+            q.z-=.5;
+            q.xy*=rot(1.5707);
+            vec2
+            a=vec2(box(p,vec3(1.+.025))-.025,1),
+            b=vec2(.7*disc(p-vec3(0,-1.35,0),vec2(3,.3-.012))-.0125,0),
+            c=vec2(smin(-(p.y+1.046),
+                min(
+                    abs(rod(p,vec2(2.2,1.5)))-.1,
+                    gem(p-vec3(0,3.7,0),.9)
+                ),-.08),-1);
+        
+            a=a.x<b.x?a:b;
+            return a.x < c.x ? a : c;
+        }
+        vec3 norm(vec3 p) {
+            float h=1e-3; vec2 k=vec2(-1,1);
+            return N(
+                k.xyy*map(p+k.xyy*h).x+
+                k.yxy*map(p+k.yxy*h).x+
+                k.yyx*map(p+k.yyx*h).x+
+                k.xxx*map(p+k.xxx*h).x
+            );
+        }
+        
+        const vec3 material = vec3(1,.7, .4);
+        const vec3 ambientLight = vec3(1);
+        const vec3 diffuseLight = vec3(.6, .8, 1);
+        const vec3 specularLight = vec3(.95,.9,.8);
+        
+        float effect(vec2 p) {
+            p=abs(abs(p)-vec2(1.1,.85))-vec2(1,.75);
+            float d=length(max(p,.0))+min(.0,max(p.x,p.y))-.02;
+            return S(.01,.0,d);
+        }
+        void main() {
+            vec2 uv=(FC-.5*R)/min(R.x,R.y);
+            vec3 col=vec3(0),
+            p=vec3(0,0,exp(1.)+exp(cos(3.1415926536+T*.125))*1.5-12.),
+            rd=N(vec3(uv,.9));
+            const float steps=400., maxd=7.5;
+            cam(p); cam(rd);
+            float bnz=.0, a=1., k=.5, side=1., dd=.0, at=.0;
+            for (float i=.0; i++<steps;) {
+                vec2 d=map(p);
+                d.x*=side;
+                if (abs(d.x)<1e-3) {
+                    if (bnz++>6.) break;
+                    vec3 n=norm(p)*side,
+                    l=N(vec3(0,4,3)),
+                    r=reflect(rd,n);
+        
+                    if (dot(l,n)<.0) l=-l;
+        
+                    if (d.y > .0) {
+                        col=max(col,pattern(p.xy,21.+sign(n.z))*abs(n.z))*material;
+                        col=max(col,pattern(p.yz,19.+sign(n.x))*abs(n.x))*material;
+                        col=max(col,pattern(p.xz,22.)*abs(n.y))*material;
+                    }
+                    if (d.y > -1.) {
+                        vec3
+                        diff=.8*clamp(dot(rd.xz,n.xz)*.5+.5,.0,1.)*diffuseLight,
+                        spec=.3*max(.0001,pow(dot(reflect(-l,n),-N(rd)),32.))*specularLight,
+                        ambt=.25*mix(vec3(.4,.6,.8),vec3(0),dot(n,vec3(0,1,0))*.5+.5)*ambientLight,
+                        phong=diff+spec+ambt;
+        
+                        col+=max(phong*a,.001);
+                        a*=k;
+                    }
+                    if (d.y < .0) {
+                        vec3
+                        diff=.15*clamp(dot(rd.xz,n.xz)*.5+.5,.0,1.)*diffuseLight;
+                        col+=a*diff;
+        
+                        side=-side;
+                        rd=refract(rd,n,1.+.25*side);
+                        d.x=.02;
+                    } else {
+                        rd=r;
+                        d.x=3e-3;
+                    }
+                    vec3 q=rd*2.3;
+                    q.yz*=rot(.45);
+                    col+=a*max(.25*effect(q.xz*5.)*n.y,.0);
+                }
+                if (d.x>maxd) break;
+                p+=rd*d.x;
+                dd+=d.x;
+                at+=.05*(.05/dd);
+            }
+            col=mix(mix(vec3(.6,.8,.9),vec3(.35,.5,.65),length(rd.xy)*.75),col,S(2.2,.2,length(uv)));
+            at*=6.;
+            col+=at*at;
+            O=vec4(col,1);
+        }
+</script>
+
+
+    
+<script src="script.js"></script>
+</body>
+</html>

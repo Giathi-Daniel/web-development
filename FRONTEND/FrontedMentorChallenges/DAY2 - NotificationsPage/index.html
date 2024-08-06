@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Notifications page</title>
+    <!-- Plus Jakarta Sans Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@500;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- STYLE -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ================== HEADER ============================ -->
+    <div class="container">
+      <header>
+        <div class="header_title">
+          <h3>Notifications</h3>
+          <span class="msg_count">3</span>
+        </div>
+        <a href="#" class="Unread">Mark All as Read</a>
+      </header>
+
+      <!-- ================== MAIN ============================ -->
+      <main>
+        <article class="read mark">
+          <div class="profile_image">
+            <img src="./assets/images/avatar-mark-webber.webp" alt="" />
+          </div>
+          <div class="profile_desc">
+            <p class="profile_text">
+              <span class="profile_name">Mark Webber</span>
+              reacted to your recent post
+              <strong>My first tournament today!</strong>
+              <span class="msg_icon"></span>
+            </p>
+            <div class="time">
+              <p>1m ago</p>
+            </div>
+          </div>
+        </article>
+        <article class="read angela">
+          <div class="profile_image">
+            <img src="./assets/images/avatar-angela-gray.webp" alt="" />
+          </div>
+          <div class="profile_desc">
+            <p class="profile_text">
+              <span class="profile_name">Angela Gray</span>
+              followed you
+              <span class="msg_icon"></span>
+            </p>
+            <div class="time">
+              <p>1m ago</p>
+            </div>
+          </div>
+        </article>
+        <article class="read">
+          <div class="profile_image">
+            <img src="./assets/images/avatar-jacob-thompson.webp" alt="" />
+          </div>
+          <div class="profile_desc">
+            <p class="profile_text">
+              <span class="profile_name">Jacob Thompson</span>
+              joined your group<span class="em"> Chess Club</span>
+              <span class="msg_icon"></span>
+            </p>
+            <div class="time">
+              <p>1day ago</p>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="profile_image">
+            <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="" />
+          </div>
+          <div class="profile_desc">
+            <p class="profile_text">
+              <span class="profile_name">Rizky Hasanuddin</span>
+              sent you a private message
+            </p>
+            <div class="time">
+              <p>5 days ago</p>
+            </div>
+            <div class="message">
+              <p>
+                Hello, thanks for setting up the Chess Club. I've been a member
+                for a few weeks now and I'm already having lots of fun and
+                improving my game.
+              </p>
+            </div>
+          </div>
+        </article>
+        <article class="top">
+          <div class="profile_image">
+            <img src="./assets/images/avatar-kimberly-smith.webp" alt="" />
+          </div>
+          <div class="profile_desc">
+            <p class="profile_text">
+              <span class="profile_name">Kimberly Smith</span>
+              commented on your picture
+            </p>
+            <div class="time">
+              <p>1 week ago</p>
+            </div>
+            <div class="chess_img">
+              <img src="./assets/images/image-chess.webp" alt="" />
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="profile_image nathan-profile">
+            <img src="./assets/images/avatar-nathan-peterson.webp" alt="" />
+          </div>
+          <div class="profile_desc nathan">
+            <p class="profile_text">
+              <span class="profile_name">Nathan Peterson</span>
+              reacted to your recent post
+              <strong>5 end-game strategies to increase your win rate</strong>
+            </p>
+            <div class="time">
+              <p>2 weeks ago</p>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="profile_image">
+            <img src="./assets/images/avatar-anna-kim.webp" alt="" />
+          </div>
+          <div class="profile_desc">
+            <p class="profile_text">
+              <span class="profile_name">Anna Kim </span>
+              left the group
+              <span class="em">Chess Club</span>
+            </p>
+            <div class="time">
+              <p>2 weeks ago</p>
+            </div>
+          </div>
+        </article>
+      </main>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">BLACKSHARK</a>.
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,279 @@
+*:not(style, head),
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: #222;
+    inline-size: 100vw;
+    block-size: 100vh;
+    overflow: hidden;
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 110%;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+body article {
+    inline-size: 100%;
+    block-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionWrapper {
+    inline-size: 100%;
+    block-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.swiper {
+    inline-size: 100%;
+    block-size: 100%;
+    padding: 50px 20px;
+    overflow: visible;
+}
+
+.swiper .parallax-bg {
+    position: absolute;
+    inset-inline-end: -5%;
+    inset-block-start: -50%;
+    inline-size: 200%;
+    block-size: 200%;
+    background-image: url("https://rb.gy/wk4c6n");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.swiper .swiper-wrapper {
+    align-items: center;
+}
+
+.swiper .swiper-slide {
+    position: relative;
+    block-size: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: rgba(102, 102, 102, 0.8);
+    border-radius: 7px;
+    padding: 10px;
+    margin: 0;
+    cursor: grab;
+    user-select: none;
+    text-wrap: pretty;
+}
+
+.swiper .swiper-slide::before {
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline-end: 0;
+    inline-size: 80px;
+    block-size: 80px;
+    border-block-end: 1px dashed white;
+    border-inline-end: 1px solid white;
+    border-radius: 0 0 7px 0;
+    content: "";
+    transition: all 0.3s ease;
+}
+
+.swiper .swiper-slide::after {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 80px;
+    block-size: 80px;
+    border-block-start: 1px solid white;
+    border-inline-start: 1px dashed white;
+    border-radius: 7px 0 0 0;
+    content: "";
+    transition: all 0.3s ease;
+}
+
+.swiper .swiper-slide:hover {
+    background: linear-gradient(135deg,
+            #ff1e9c99,
+            #ff1ea499,
+            #ff1fbc99,
+            #ff1fde99,
+            #f620ff99,
+            #c721ff99,
+            #9723ff99,
+            #6a24ff99,
+            #4125ff99,
+            #252aff99,
+            #2641ff99,
+            #2649ff99);
+}
+
+.swiper .swiper-slide:hover::before,
+.swiper .swiper-slide:hover::after {
+    inline-size: 170px;
+    block-size: 170px;
+    transition: all 0.3s ease;
+}
+
+.swiper .swiper-slide .cardPopout {
+    inline-size: 100%;
+    block-size: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 7px;
+    padding: 20px;
+    inline-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.swiper .swiper-slide img {
+    inline-size: 100%;
+    block-size: auto;
+    margin-block-end: 25px;
+    border-radius: 5px;
+}
+
+.swiper .swiper-slide h2 {
+    font-size: 200%;
+    line-height: 110%;
+    margin: 0 0 7px 0;
+    color: white;
+    font-family: "Nabla", system-ui;
+    font-variation-settings: "EDPT" 100, "EHLT" 24;
+    background-color: #111;
+    border-radius: 100%;
+}
+
+.swiper .swiper-slide h4 {
+    font-size: 110%;
+    line-height: 120%;
+    font-weight: 700;
+    margin: 0 0 13px 0;
+    color: #bbb;
+    font-style: italic;
+}
+
+.swiper .swiper-slide figcaption {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0 0 20px 0;
+    padding-inline-start: 20px;
+    border-inline-start: 1px solid white;
+}
+
+.swiper .swiper-slide figcaption p {
+    color: #999;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.swiper .swiper-slide a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.6s ease !important;
+}
+
+.swiper .swiper-slide a:hover {
+    color: black;
+    transition: all 0.6s ease;
+}
+
+.swiper .swiper-slide a::after {
+    position: absolute;
+    inset-inline-end: 100%;
+    inset-block-end: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    background-color: #2649ff;
+    content: "";
+    z-index: -1;
+    transition: all 0.6s ease;
+}
+
+.swiper .swiper-slide a:hover::after {
+    inset-inline-end: 0;
+    transition: all 0.6s ease;
+}
+
+.swiper .swiper-slide a svg {
+    inline-size: 23px;
+    block-size: auto;
+    fill: white;
+    margin-inline-start: 5px;
+    transition: all 0.6s ease;
+}
+
+.swiper .swiper-slide a:hover svg {
+    margin-inline-start: 10px;
+    fill: black;
+    transition: all 0.6s ease;
+}
+
+.swiper .swiper-scrollbar {
+    --swiper-scrollbar-bottom: 0px;
+    --swiper-scrollbar-size: 10px;
+}
+
+@media (max-block-size: 550px) {
+    .swiper .swiper-slide figcaption p {
+        -webkit-line-clamp: 2;
+    }
+}
+
+@media (max-block-size: 490px) {
+    .swiper .swiper-slide figcaption p {
+        -webkit-line-clamp: 1;
+    }
+}
+
+@media (max-block-size: 460px) {
+    .swiper .swiper-slide figcaption p {
+        display: none;
+    }
+
+    .swiper .swiper-slide h4 {
+        margin: 0;
+    }
+}
+
+@media (max-block-size: 430px) {
+    .swiper .swiper-wrapper {
+        position: relative;
+        inset-block-end: 6px;
+    }
+}
+
+@media (max-inline-size: 750px) {
+    .swiper .parallax-bg {
+        inline-size: 320%;
+    }
+}

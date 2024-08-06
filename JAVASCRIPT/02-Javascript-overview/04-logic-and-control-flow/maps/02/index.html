@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map</title>
+</head>
+<body>
+    <h1>Map</h1>
+
+    <script>
+        const numbers = [1,2,3,4,5,6,7,8,9,10];
+
+        const squaredNumbers = numbers.map(number => {
+            return number * 2
+        })
+
+        console.log(squaredNumbers)
+
+        // forEach
+        const doubleNumbers = []
+        numbers.forEach(item => {
+            return doubleNumbers.push(item * 2);
+        })
+
+        console.log(doubleNumbers)
+
+        // Chain map methods
+        const squareAndDouble = numbers
+        .map((number) => Math.sqrt(number))
+        .map((sqrt) => sqrt * 2);
+
+        const squareAndDouble2 = numbers
+         .map(function (number) {
+            return Math.sqrt(number);
+         })
+         .map(function (sqrt) {
+            return sqrt * 2;
+         })
+
+        console.log(squareAndDouble2)
+
+        // different methods
+        const evenDoubled = numbers.filter(number => number % 2 === 0)
+        .map((number) => number * 2)
+        // .map((number) => number / 2)
+        
+        console.log(evenDoubled)
+    </script>
+</body>
+</html>

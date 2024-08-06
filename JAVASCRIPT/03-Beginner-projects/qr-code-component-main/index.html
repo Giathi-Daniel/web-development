@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | QR code component</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400...700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      body {
+        font-family: "Outfit", sans-serif;
+        background: hsl(220, 15%, 55%);
+      }
+      .container {
+        background: hsl(0, 0%, 100%);
+        inline-size: 20%;
+        border-radius: 1.5rem;
+        padding: 2rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 5rem auto;
+        box-shadow: inset 0 2rem 3rem hsl(0, 0%, 90%);
+      }
+
+      img {
+        inline-size: 90%;
+        border-radius: 1rem;
+      }
+
+      h4 {
+        margin-block-start: 2rem;
+        font-size: 2rem;
+        text-align: center;
+        padding-inline: 1rem;
+        max-inline-size: 400px;
+      }
+
+      p {
+        margin-block-start: -1rem;
+        font-size: 2rem;
+        text-align: center;
+        color: hsl(220, 15%, 55%);
+        padding-inline: 1rem;
+      }
+
+      hr {
+        inline-size: 100%;
+        margin-block-end: 1rem;
+      }
+
+      @media screen and (max-width: 1024px) {
+        .container {
+          inline-size: 70%;
+          padding: 2rem 0rem;
+        }
+
+        h4 {
+          font-size: 2rem;
+        }
+
+        img {
+          inline-size: 90%;
+        }
+
+        p {
+          font-size: 1.75rem;
+        }
+      }
+
+      @media screen and (max-width: 764px) {
+        h4 {
+          font-size: 1.3rem;
+          padding-inline: 0;
+        }
+
+        img {
+          inline-size: 80%;
+          block-size: auto;
+          margin-top: 0;
+        }
+
+        p {
+          font-size: 1rem;
+          padding-inline: 0;
+        }
+      }
+
+      @media screen and (max-width: 375px) {
+        .container {
+          inline-size: 90%;
+          padding: 20px;
+        }
+
+        h4 {
+          font-size: 20px;
+          padding-inline: 0;
+        }
+
+        img {
+          inline-size: 100%;
+          block-size: auto;
+        }
+
+        p {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="images/image-qr-code.png" alt="" />
+      <h4>Improve your front-end skills by building projects</h4>
+      <p>
+        Scan the QR code to visit Frontend Mentor and take your coding skills to
+        the next level
+      </p>
+    </div>
+  </body>
+</html>

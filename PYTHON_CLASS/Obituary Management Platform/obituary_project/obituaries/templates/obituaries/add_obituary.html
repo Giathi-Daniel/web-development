@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Obituary</title>
+</head>
+<body>
+    <h1>Add New Obituary</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    <a href="{% url 'obituary_list' %}">Back to List</a>
+</body>
+</html>

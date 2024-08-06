@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon Clone</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+
+    <!-- SIDEBAR SECTION -->
+    <div class="sidebar">
+      <div class="hdn-head">
+        <i class="fa-solid fa-user-circle"></i><h2>Hello, sign in</h2>
+      </div>
+      <div class="hdn-content">
+        <h3>Digital Conetent & Devices</h3>
+        <ul>
+          <div>
+            <li>Amazon Music</li> <div class="fa-solid fa-angle-right"></div>
+          </div>
+          <div>
+            <li>Kindle E-readers & Books</li> <div class="fa-solid fa-angle-right"></div>
+          </div>
+          <div>
+            <li>Amazon Appstore</li> <div class="fa-solid fa-angle-right"></div>
+          </div>
+        </ul>
+        <div class="line" style="background-color: rgb(154, 149, 149);"></div>
+      </div>
+      <div class="hdn-content">
+        <h3>Shop by Department</h3>
+        <ul>
+          <div>
+            <li>Electronics</li> <div class="fa-solid fa-angle-right"></div>
+          </div>
+          <div>
+            <li>Computers</li> <div class="fa-solid fa-angle-right"></div>
+          </div>
+          <div>
+            <li>Smart Home</li> <div class="fa-solid fa-angle-right"></div>
+          </div>
+          <div>
+            <li>Arts & Crafts</li> <div class="fa-solid fa-angle-right"></div>
+          </div>
+          <div>
+            <li>See all <i class="fa-solid fa-angle-down"></i></li>  
+          </div>
+        </ul>
+        <div class="line" style="background-color: rgb(154, 149, 149);"></div>
+      </div>
+      <div class="hdn-content">
+        <h3>Programs & Features</h3>
+        <ul>
+          <div>
+            <li>Gift Cards</li> <div class="fa-solid fa-angle-right"></div>
+          </div>
+          <div>
+            <li>Shop By Interest</li> <div class="fa-solid fa-angle-right"></div>
+          </div>
+          <div>
+            <li>Amazon Live</li> <div class="fa-solid fa-angle-right"></div>
+          </div>
+          <div>
+            <li>International Shopping</li> <div class="fa-solid fa-angle-right"></div>
+          </div>
+          <div>
+            <li>See all <i class="fa-solid fa-angle-down"></i></li>  
+          </div>
+        </ul>
+        <div class="line" style="background-color: rgb(154, 149, 149);"></div>
+      </div>
+      <div class="hdn-content">
+        <h3>Help & Settings</h3>
+        <ul>
+          <div>
+            <li>Your Account</li>
+          </div>
+          <div>
+            <li>English</li>
+          </div>
+          <div>
+            <li>United States</li>
+          </div>
+          <div>
+            <li>Customer Service</li>
+          </div>
+          <div>
+            <li>Sign in</li>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <i class="fa-solid fa-xmark"></i>
+    <div class="black"></div>
+    <div class="triangle"></div>
+    <div class="hdn-sign">
+      <!-- Account & Lists -->
+      <div class="hdn-table">
+        <div>
+          <h3>Your Lists</h3>
+          <ul>
+            <li>Create a list</li>
+          </ul>
+        </div>
+        <div class="hdn-line"></div>
+        <div>
+          <h3>Your Account</h3>
+          <ul>
+            <li>Account</li>
+            <li>Orders</li>
+            <li>Recommendations</li>
+            <li>Browsing History</li>
+            <li>Watchlists</li>
+            <li>Video Purchases</li>
+            <li>Kindle Unlimited</li>
+            <li>Content & Devices</li>
+            <li>Subscribe & Save Items</li>
+            <li>Membership & Subscriptions</li>
+            <li>Music Library</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="black"></div>
+    <!-- SIDEBAR SECTION END -->
+    <!-- HEADER SECTION -->
+    <header>
+      <div class="first">
+        <div class="flex logo">
+          <a href="#"
+            ><img
+              src="img/logo.png"
+              alt=""
+          /></a>
+          <div class="map flex">
+            <i class="fas fa-map-marker"></i>
+            <div>
+              <span>Deliver to</span>
+              <span>Kenya</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex input">
+          <div>
+            <span>All</span>
+            <i class="fas fa-caret-down"></i>
+          </div>
+          <input type="text" />
+          <i class="fas fa-search"></i>
+        </div>
+        <div class="flex right">
+          <div class="flex lang">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/002/399/741/small/american-flag-icon-vector.jpg"
+              alt=""
+            />
+            <i class="fas fa-caret-down"></i>
+          </div>
+          <div class="sign">
+            <span>Hello, sign in</span>
+            <div class="flex ac">
+              <span>Account & Lists</span>
+              <i class="fas fa-caret-down"></i>
+            </div>
+          </div>
+          <div class="sign">
+            <span>Returns</span>
+            <span>& borders</span>
+          </div>
+          <div class="flex cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="ca">Cart</span>
+            <p>0</p>
+          </div>
+        </div>
+      </div>
+      <div class="second">
+        <div class="second-1">
+          <div>
+            <i class="fas fa-bars"></i>
+            <span>All</span>
+          </div>
+        </div>
+        <div class="second-2">
+          <ul>
+            <li>Today's Deal</li>
+            <li>Registry</li>
+            <li>Customer Service</li>            
+            <li>Gift Cards</li>
+            <li>Sell</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- HEADER SECTION END -->
+
+    <!-- SLIDER SECTION -->
+    <section class="sec-1">
+      <div class="container">
+        <div class="container-1">
+          <div class="para">
+            <p>You are on amazon.com You can also shop on Amazon Kenya for millions of products with fast local delivery <a href="#">click here to go to amazon.in</a></p>
+          </div>
+          <div class="product-comp">
+            <div class="box">
+              <h3>Gaming Accessories</h3>
+              <div class="box-a">
+                <div>
+                  <img src="img/ga1.jpg" alt="">
+                  <span>Headsets</span>
+                </div>
+                <div>
+                  <img src="img/ga5.jpeg" alt="">
+                  <span>Keyboards</span>
+                </div>
+                <div>
+                  <img src="img/ga3.jpg" alt="">
+                  <span>Commercial mouse</span>
+                </div>
+                <div>
+                  <img src="img/ga4.jpg" alt="">
+                  <span>Chairs</span>
+                </div>
+              </div>
+              <a href="#">See more</a>
+            </div>
+            <div class="box box-c">
+              <h3>Deals in Pcs</h3>
+              <div>
+                <img src="img/pc.jpg" style="inline-size: 270px; block-size: 260px;">
+              </div>
+              <a href="#">Shop now</a>
+            </div>
+            <div class="box box-c">
+              <h3>Toys under $25</h3>
+              <div>
+                <img src="img/toy.jpg" style="inline-size: 270px; block-size: 260px;">
+              </div>
+              <a href="#">Shop now</a>
+            </div>
+            <div class="box box-d">
+              <h3>Shop deals in Fashion</h3>
+              <div class="box-a">
+                <div>
+                  <img src="img/je.jpg" alt="">
+                  <span>Jeans under $50</span>
+                </div>
+                <div>
+                  <img src="img/cm4.jpg" alt="">
+                  <span>T-shirts under $25</span>
+                </div>
+                <div>
+                  <img src="img/ga2.jpg" alt="">
+                  <span>Dresses under $30</span>
+                </div>
+                <div>
+                  <img src="img/gal3.jpg" alt="">
+                  <span>Shoes under $50</span>
+                </div>
+              </div>
+              <a href="#">See all deals</a>
+            </div>
+          </div>
+          <div class="product-comp">
+            <div class="box box-c">
+              <h3>Top Deal</h3>
+                <div>
+                  <img src="img/ga6.jpg" style="inline-size: 270px; block-size: 260px;">
+                  <p style="margin-inline-start: 10px;">oneisall Dog Hair Vacuum Shaver Clippers</p>
+                </div>
+              <a href="#">See all deals</a>
+            </div>
+            <div class="box box-c">
+              <h3>Free international returns</h3>
+              <div>
+                <img src="img/ga7.jpg" style="inline-size: 270px; block-size: 260px;">
+              </div>
+              <a href="#">Learn more</a>
+            </div>
+            <div class="box box-c">
+              <h3>Lunar New Year</h3>
+              <div>
+                <img src="img/ga8.jpg" style="inline-size: 270px; block-size: 260px;"> <!--  justify-content: space-around; margin-inline-start: 15px; margin-block-start: -9px; -->
+              </div>
+              <a href="#">Shop now</a>
+            </div>
+            <div class="box box-d">
+              <h3>Fashion trends you like</h3>
+              <div class="box-a">
+                <div>
+                  <img src="img/ga9.jpg" alt="">
+                  <span>Dresses</span>
+                </div>
+                <div>
+                  <img src="img/ga10.jpg" alt="">
+                  <span>Knits</span>
+                </div>
+                <div>
+                  <img src="img/ga11.jpg" alt="">
+                  <span>Jackets</span>
+                </div>
+                <div>
+                  <img src="img/ga12.jpg" alt="">
+                  <span>Jewelry</span>
+                </div>
+              </div>
+              <a href="#">Explore more</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider -->
+        <div class="slider">
+          <div class="image-box">
+            <div class="slide">
+              <img src="img/bg1.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img src="img/bg2.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img src="img/bg4.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img src="img/si3.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SLIDER SECTION END -->
+
+    <!-- SCROLL SECTION -->
+    <section class="sec-2">
+      <div class="slide-sec">
+        <div class="l-btn"><i class="fa-solid fa-chevron-left"></i></div>
+        <div class="r-btn"><i class="fa-solid fa-chevron-right"></i></div>
+        <h3>Popular products in Wirelessly internationally</h3>
+        <ul class="product-slide">
+          <li><img src="img/pinter1.jpg"></li>
+          <li><img src="img/pinter2.jpg"></li>
+          <li><img src="img/pinter3.jpg"></li>
+          <li><img src="img/pinter4.jpg"></li>
+          <li><img src="img/pinter5.jpg"></li>
+          <li><img src="img/pinter6.jpg"></li>
+          <li><img src="img/pinter7.jpg"></li>
+          <li><img src="img/pinter8.jpg"></li>
+          <li><img src="img/pinter9.jpg"></li>
+          <li><img src="img/pinter10.jpg"></li>
+          <li><img src="img/pinter11.jpg"></li>
+          <li><img src="img/pinter12.jpg"></li>
+          <li><img src="img/pinter13.jpg"></li>
+          <li><img src="img/pinter14.jpg"></li>
+          <li><img src="img/pinter15.jpg"></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sec-2">
+      <div class="slide-sec">
+        <div class="l-btn btn-1b"><i class="fa-solid fa-chevron-left"></i></div>
+        <div class="r-btn btn-1a"><i class="fa-solid fa-chevron-right"></i></div>
+        <h3>Deals on electronics, gadgets & accessories <a href="#">Explore all deals</a></h3>
+        <ul class="product-slide product-slide-1">
+          <li><img src="img/pc1.jpg"></li>
+          <li><img src="img/pc2.jpg"></li>
+          <li><img src="img/pc3.jpg"></li>
+          <li><img src="img/pc4.jpg"></li>
+          <li><img src="img/pc5.jpg"></li>
+          <li><img src="img/pc6.jpg"></li>
+          <li><img src="img/pc7.jpg"></li>
+          <li><img src="img/pc8.jpg"></li>
+          <li><img src="img/pc9.jpg"></li>
+          <li><img src="img/pc10.jpg"></li>
+          <li><img src="img/pc11.jpg"></li>
+          <li><img src="img/pc12.jpg"></li>
+          <li><img src="img/pc13.jpg"></li>
+          <li><img src="img/pc14.jpg"></li>
+          <li><img src="img/pc15.jpg"></li>
+        </ul>
+      </div>
+    </section>
+    <!-- SCROLL SECTION END -->
+
+    <!-- PRODUCTS SECTION -->
+    <div class="product-comp">
+      <div class="box box-c">
+        <h3>Shop activity tracers and smart watches</h3>
+        <div>
+          <img src="img/watch.jpg" style="inline-size: 270px; block-size: 260px;">
+        </div>
+        <a href="#">shop now</a>
+      </div>
+      <div class="box box-d">
+        <h3>Gaming merchandise</h3>
+        <div class="box-a">
+          <div>
+            <img src="img/gm1.jpg">
+            <span>Apparel</span>
+          </div>
+          <div>
+            <img src="img/gm2.jpg">
+            <span>Hats</span>
+          </div>
+          <div>
+            <img src="img/gm3.jpg">
+            <span>Action figures</span>
+          </div>
+          <div>
+            <img src="img/gm4.jpg">
+            <span>Mugs</span>
+          </div>
+        </div>
+        <a href="#">Shop now</a>
+      </div>
+      <div class="box box-c">
+        <h3>Player's paradise starts here</h3>
+        <div>
+          <img src="img/gm5.jpg">
+        </div>
+        <a href="#">Shop video games</a>
+      </div>
+      <div class="box box-d">
+        <h3>Warm and welcoming decor</h3>
+        <div class="box-a">
+          <div>
+            <img src="img/gm6.jpg">
+            <span>Wreaths & garlands</span>
+          </div>
+          <div>
+            <img src="img/gm7.jpg">
+            <span>Outdoor decor</span>
+          </div>
+          <div>
+            <img src="img/gm8.jpg">
+            <span>Pillows & throws</span>
+          </div>
+          <div>
+            <img src="img/gm9.jpg">
+            <span>Wal art & mirrors</span>
+          </div>
+        </div>
+        <a href="#">Shop more fall finds</a>
+      </div>
+    </div>
+    <!-- PRODUCTS SECTION END -->
+
+    <!-- SCROLL SECTION 2 -->
+    <section class="sec-2">
+      <div class="slide-sec">
+        <div class="l-btn btn-1d"><i class="fa-solid fa-chevron-left"></i></div>
+        <div class="r-btn btn-1c"><i class="fa-solid fa-chevron-right"></i></div>
+        <h3>Popular products in beauty internationally</h3>
+        <ul class="product-slide product-slide-2">
+          <li><img src="img/pb1.jpg"></li>
+          <li><img src="img/pb2.jpg"></li>
+          <li><img src="img/pb3.jpg"></li>
+          <li><img src="img/pb4.jpg"></li>
+          <li><img src="img/pb5.jpg"></li>
+          <li><img src="img/pb6.jpg"></li>
+          <li><img src="img/pb7.jpg"></li>
+          <li><img src="img/pb8.jpg"></li>
+          <li><img src="img/pb9.jpg"></li>
+          <li><img src="img/pb10.jpg"></li>
+          <li><img src="img/pb11.jpg"></li>
+          <li><img src="img/pb12.jpg"></li>
+          <li><img src="img/pb13.jpg"></li>
+          <li><img src="img/pb14.jpg"></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sec-2">
+      <div class="slide-sec">
+        <div class="l-btn btn-1f"><i class="fa-solid fa-chevron-left"></i></div>
+        <div class="r-btn btn-1e"><i class="fa-solid fa-chevron-right"></i></div>
+        <h3>Deals under $25</h3>
+        <ul class="product-slide product-slide-3">
+          <li><img src="img/dl1.jpg"></li>
+          <li><img src="img/dl2.jpg"></li>
+          <li><img src="img/dl3.jpg"></li>
+          <li><img src="img/dl4.jpg"></li>
+          <li><img src="img/dl5.jpg"></li>
+          <li><img src="img/dl6.jpg"></li>
+          <li><img src="img/dl7.jpg"></li>
+          <li><img src="img/dl8.jpg"></li>
+          <li><img src="img/dl9.jpg"></li>
+          <li><img src="img/dl10.jpg"></li>
+          <li><img src="img/dl11.jpg"></li>
+          <li><img src="img/dl12.jpg"></li>
+          <li><img src="img/dl13.jpg"></li>
+          <li><img src="img/dl14.jpg"></li>
+          <li><img src="img/dl15.jpg"></li>
+        </ul>
+      </div>
+    </section>
+    <!-- SCROLL SECTION 2 END -->
+
+    <!-- PRODUCTS SECTION 2 -->
+      <div class="product-comp" style="margin-block-start: 0;">
+        <div class="box box-c">
+          <h3>A whole new way to work</h3>
+          <div>
+            <img src="img/p1.jpg" style="inline-size: 270px; block-size: 260px;">
+          </div>
+          <a href="#">shop personal computers</a>
+        </div>
+        <div class="box box-c">
+          <h3>Personal care under $25</h3>
+          <div>
+            <img src="img/p2.jpg">
+          </div>
+          <a href="#">See more</a>
+        </div>
+        <div class="box box-c">
+          <h3>Upgrade your office furniture</h3>
+          <div>
+            <img src="img/p3.jpg">
+          </div>
+          <a href="#">Shop now</a>
+        </div>
+        <div class="box box-c">
+          <h3>Deals on shoes</h3>
+          <div>
+            <img src="img/p4.jpg">
+          </div>
+          <a href="#">See more</a>
+        </div>
+      </div>
+    <!-- PRODUCTS SECTION 2 END -->
+
+    <!-- SCROLL SECTION 3 -->
+    <section class="sec-2">
+      <div class="slide-sec">
+        <div class="l-btn btn-1h"><i class="fa-solid fa-chevron-left"></i></div>
+        <div class="r-btn btn-1g"><i class="fa-solid fa-chevron-right"></i></div>
+        <h3>Top sellers in books for you</h3>
+        <ul class="product-slide product-slide-4">
+          <li><img src="img/b1.jpg"></li>
+          <li><img src="img/b2.jpg"></li>
+          <li><img src="img/b3.jpg"></li>
+          <li><img src="img/b4.jpg"></li>
+          <li><img src="img/b5.jpg"></li>
+          <li><img src="img/b6.jpg"></li>
+          <li><img src="img/b7.jpg"></li>
+          <li><img src="img/b8.jpg"></li>
+          <li><img src="img/b9.jpg"></li>
+          <li><img src="img/b10.jpg"></li>
+          <li><img src="img/b11.jpg"></li>
+          <li><img src="img/b12.jpg"></li>
+          <li><img src="img/b13.jpg"></li>
+          <li><img src="img/b14.jpg"></li>
+          <li><img src="img/b15.jpg"></li>
+          <li><img src="img/b16.jpg"></li>
+          <li><img src="img/b17.jpg"></li>
+          <li><img src="img/b18.jpg"></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sec-2">
+      <div class="slide-sec">
+        <div class="l-btn btn-1j"><i class="fa-solid fa-chevron-left"></i></div>
+        <div class="r-btn btn-1i"><i class="fa-solid fa-chevron-right"></i></div>
+        <h3>Most wished for in Video Games</h3>
+        <ul class="product-slide product-slide-5">
+          <li><img src="img/g1.jpg"></li>
+          <li><img src="img/g2.jpg"></li>
+          <li><img src="img/g3.jpg"></li>
+          <li><img src="img/g4.jpg"></li>
+          <li><img src="img/g5.jpg"></li>
+          <li><img src="img/g6.jpg"></li>
+          <li><img src="img/g7.jpg"></li>
+          <li><img src="img/g8.jpg"></li>
+          <li><img src="img/g9.jpg"></li>
+          <li><img src="img/g10.jpg"></li>
+          <li><img src="img/g12.jpg"></li>
+          <li><img src="img/g16.jpg"></li>
+          <li><img src="img/g13.jpg"></li>
+          <li><img src="img/g14.jpg"></li>
+          <li><img src="img/g15.jpg"></li>
+        </ul>
+      </div>
+    </section>
+    <!-- SCROLL SECTION 3 END -->
+
+
+    <!-- FOOTER SECTION -->
+    <section class="footer">
+      <div class="backtop">
+        <span>Back to Top</span>
+      </div>
+      <div class="detail">
+        <div class="table">
+          <div>
+            <div class="t-head">Get to Know us</div>
+            <ul>
+              <li>Careers</li>
+              <li>Blog</li>
+              <li>About Amazon</li>
+              <li>Investors Relations</li>
+              <li>Amazon Advices</li>
+              <li>Amazon Science</li>
+            </ul>
+          </div>
+          <div>
+            <div class="t-head">Make money with Us</div>
+            <ul>
+              <li>Sell products on Amazon</li>
+              <li>Sell on Amazon Business</li>
+              <li>Sell apps on Amazon</li>
+              <li>Become an Atlantic</li>
+              <li>Advertise Your Products</li>
+              <li>Sell-Publish with Us</li>
+              <li>Host on Amazon Hub</li>
+            </ul>
+          </div>
+          <div>
+            <div class="t-head">Amazon Payment Products</div>
+            <ul>
+              <li>Amazon Business Card</li>
+              <li>Shop with Points</li>
+              <li>Reload Your Balance</li>
+              <li>Amazon Currency Converter</li>
+            </ul>
+          </div>
+          <div>
+            <div class="t-head">Let Us Help You</div>
+            <ul>
+              <li>Amazon and COVID-19</li>
+              <li>Your Account</li>
+              <li>Your Orders</li>
+              <li>Shopping Rates & Policices</li>
+              <li>Returns & Replacements</li>
+              <li>Manage Your Content and Devices</li>
+              <li>Amazon Assistant</li>
+              <li>Help</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="copy">
+        <span>&copy; Designed By Blackshark 😎 😎 😎</span>
+      </div>
+    </section>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

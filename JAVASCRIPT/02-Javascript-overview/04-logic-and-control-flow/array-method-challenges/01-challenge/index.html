@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map</title>
+</head>
+<body>
+    <h1>Array method challenge</h1>
+
+    <!-- Instructions
+        - create an array called youngPeople
+        - store only name and email properties of all the people that are 25 and under.
+        - The name property should have their first name and last name.
+    -->
+
+    <script>
+        const people = [
+            {
+                firstName: 'John',
+                lastName: 'Doe',
+                email: 'johndoe@gmail.com',
+                phonee: '+111-111-111',
+                age: 30,
+            },
+            {
+                firstName: 'Paul',
+                lastName: 'Poe',
+                email: 'paulpoe@gmail.com',
+                phonee: '+222-22-222',
+                age: 25,
+            },
+            {
+                firstName: 'Bob',
+                lastName: 'Foe',
+                email: 'bobfoe@gmail.com',
+                phonee: '+333-333-333',
+                age: 45,
+            },
+            {
+                firstName: 'Sara',
+                lastName: 'Soe',
+                email: 'sarasoe@gmail.com',
+                phonee: '+444-4444-444',
+                age: 19,
+            },
+            {
+                firstName: 'Jose',
+                lastName: 'Joe',
+                email: 'josejoe@gmail.com',
+                phonee: '+555-555-555',
+                age: 23,
+            },
+        ]
+
+        // let youngPeople = [];
+
+        // const newArr = people.filter((person) => {
+        //     if (person.age <= 25) {
+        //         youngPeople.push(person.age
+        //         )
+        //     }
+            
+        // })
+
+        const youngPeople = people.filter(person => person.age <= 25)
+        .map(person => ({
+            name: person.firstName + ' ' +person.lastName,
+            email: person.email
+        }))
+        console.log(youngPeople)
+    </script>
+</body>
+</html>

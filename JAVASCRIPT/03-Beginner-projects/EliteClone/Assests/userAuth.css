@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ********************* GENERAL STYLING ********************** */
+:root {
+    --color-primary: rgb(76 29 149);
+    --color-secondary: linear-gradient(to top, #5b21b6, #4c1d95);
+    --color-heading: rgb(17, 24, 39);
+    --color-light: rgb(107, 114, 128);
+    --color-white: rgb(229, 231, 235);
+    --color-btn: rgb(186, 114, 100);
+
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --container-width-sm: 100%;
+
+    --transition: all 400ms ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.notifications i {
+    color: var(--color-white);
+}
+
+/* **************************SING UP************************** */
+form {
+    text-align: center;
+    justify-content: center;
+    margin: 15rem auto -9rem;
+}
+
+.form_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-start-start-radius: 1rem;
+    border-end-end-radius: 1rem;
+    border-start-end-radius: 3rem;
+    border-end-start-radius: 3rem;
+    overflow: hidden;
+}
+
+.form_option {
+    background: var(--color-secondary);
+    padding: 10rem 1rem;
+    border-start-start-radius: inherit;
+    line-height: 3rem;
+}
+
+.form_option h1 {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.form_option p {
+    font-size: max(1rem, 80%);
+    text-align: center;
+    padding-block: 1rem;
+    color: var(--color-white);
+}
+
+.form_option input[type="submit"] {
+    border-radius: 7rem;
+    padding: 1rem 2rem;
+    outline: 0;
+    border: none;
+    text-transform: uppercase;
+    font-size: max(1rem, 80%);
+    background: var(--color-btn);
+    color: #fff;
+    font-weight: bolder;
+    line-height: 1.5rem;
+    cursor: pointer;
+}
+
+.form_main {
+    padding-block-start: 1rem;
+    text-align: start;
+    background-color: rgb(255, 255, 255);
+    padding-inline-start: 1rem;
+}
+
+.form_main h2 {
+    margin-block-end: 1rem;
+    text-transform: capitalize;
+}
+
+.form_input {
+    display: inline-block;
+    max-inline-size: 100%;
+}
+
+.form_main label,
+.form_input label {
+    display: block;
+    color: #000;
+}
+
+.form_input input {
+    padding-block: 0.5rem;
+    border-radius: 0.5rem;
+    outline: none;
+    border: 1px solid lightgrey;
+    font-size: 1.2rem;
+    margin-block-start: .5rem;
+    margin-block-end: 1rem;
+    justify-content: center;
+    color: rgb(125, 121, 121);
+    transition: var(--transition);
+}
+
+.form_main input {
+    display: block;
+    inline-size: 94%;
+    padding-block: 0.5rem;
+    padding-inline-start: 7px;
+    border-radius: 0.5rem;
+    outline: none;
+    border: 1px solid lightgrey;
+    font-size: 1.2rem;
+    margin-block-start: .5rem;
+    margin-block-end: 1rem;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.form_main input[type="submit"] {
+    border-radius: 7rem;
+    outline: 0;
+    border: none;
+    text-transform: uppercase;
+    font-size: max(1rem, 80%);
+    background: var(--color-btn);
+    color: #fff;
+    font-weight: bolder;
+    line-height: 1.5rem;
+    cursor: pointer;
+}
+
+input:focus {
+    border: 3px solid var(--color-btn);
+}
+
+.sign-up input:hover[type="submit"] {
+    background: rgb(255, 255, 255);
+    color: var(--color-btn);
+    border: 1px solid var(--color-btn);
+}
+
+.sign-up {
+    display: none;
+}
+
+
+
+/* ==============================SIGN IN ============================== */
+.sign-in .form_main {
+    padding-block: 7rem;
+}
+
+.sign-in .form_main h2 {
+    margin-block-end: 3rem;
+}
+
+.sign-in .form_main .sign-in_actions {
+    display: flex;
+    justify-content: space-between;
+    inline-size: 100%;
+}
+
+.sign-in_actions .check {
+    display: flex;
+    gap: .3rem;
+}
+
+.check input[type="checkbox"] {
+    inline-size: 1.2rem;
+    block-size: 1.2rem;
+}
+
+.sign-in_actions .check span {
+    align-self: flex-start;
+    margin-block-start: 5px;
+}
+
+.sign-in_actions p {
+    color: #000;
+    margin-inline-end: 2.2rem;
+    font-size: 1.1rem;
+}
+
+.sign-in .form_option {
+    border-start-start-radius: 0;
+}
+
+.sign-in input:hover[type="submit"] {
+    background: rgb(255, 255, 255);
+    color: var(--color-btn);
+    border: 1px solid var(--color-btn);
+}
+
+
+/* ============================== FOOTER ============================== */
+
+
+/* ============================== RESPONSIVE ============================== */
+@media screen and (max-width: 1300px) {
+    .container {
+        inline-size: 96%;
+    }
+
+    .nav_container {
+        inline-size: 90%;
+        margin-inline-start: -33rem;
+    }
+
+    .form_container {
+        inline-size: 80%;
+        margin-inline-end: 8rem;
+    }
+
+    footer .credit {
+        margin-inline-start: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 790px) {
+    .container {
+        inline-size: 100%;
+    }
+
+    .nav_container {
+        inset-inline-start: -35rem;
+        inline-size: 91%;
+    }
+
+    .form_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        inline-size: 96%;
+    }
+
+    .form_main {
+        border-radius: 0;
+    }
+
+    .form_container {
+        margin-block-end: 0;
+    }
+}

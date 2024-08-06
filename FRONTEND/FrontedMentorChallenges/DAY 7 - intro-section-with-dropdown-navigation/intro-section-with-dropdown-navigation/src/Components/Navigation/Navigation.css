@@ -1,0 +1,184 @@
+nav {
+    block-size: 7vh;
+    display: grid;
+    inline-size: 96%;
+    margin: 0 2rem;
+}
+
+.nav_container {
+    display: flex;
+    block-size: 100%;
+    inline-size: 100%;
+    padding: 1rem;
+}
+
+.nav_container .logo {
+    margin-inline-end: 2rem;
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+.nav_links {
+    display: flex;
+    margin-inline-end: auto;
+    transition: var(--transition);
+}
+
+.nav_container .logo {
+    letter-spacing: -.1rem;
+    font-size: 2.1rem;
+}
+
+
+ul li {
+    margin-inline: 1rem;
+    font-size: .9rem;
+}
+
+a ion-icon {
+    font-size: .8rem;
+}
+
+/* NAV_FORM */
+.nav_form {
+    display: flex;
+}
+
+/* DROPDOWNS */
+
+#features,
+#company {
+    display: none;
+}
+
+.drop-down {
+    background: var(--color-bg);
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);
+    border-radius: .4rem;
+    padding-block: 1rem;
+    padding-inline-end: .5rem;
+}
+
+#company {
+    color: var(--color-md-gray);
+}
+
+.drop-down ion-icon.todo {
+    color: #0000ff;
+}
+
+.drop-down .cal {
+    color: #0eefbe;
+}
+
+.drop-down .out {
+    color: #0000ff;
+}
+
+.drop-down li a {
+    color: var(--color-md-gray);
+}
+
+.drop-down ion-icon {
+    margin-inline-end: .5rem;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.drop-down ion-icon .todo {
+    color: #0000ff;
+    background: yellow;
+}
+
+/* MENU */
+.menu_btn {
+    position: absolute;
+    inset-inline-end: 1rem;
+    font-size: 3rem;
+    display: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#close {
+    display: none;
+}
+
+
+/* ======================= MEDIA QUERIES ===================================== */
+/* ===================== TABLETS ===================== */
+@media screen and (max-width: 1024px) {
+    nav {
+        inline-size: 100%;
+        margin: 0;
+    }
+
+    ul li {
+        font-size: 1.2rem;
+    }
+
+    a ion-icon {
+        position: absolute;
+        inset-block-start: 1.5rem;
+        padding-inline-start: .5rem;
+    }
+}
+
+/* ===================== PHONES ===================== */
+@media screen and (max-width: 764px) {
+    .nav_links.active {
+        position: absolute;
+        inset-block-start: 5rem;
+        flex-direction: column;
+        inset-inline-end: 0;
+        gap: 1.5rem;
+        background: var(--color-bg);
+        block-size: 100vh;
+        box-shadow: 2rem 0 5rem rgba(0, 0, 0, 0.2);
+        inline-size: 60%;
+        inset-block-start: 0;
+        padding-block-start: 7rem;
+        padding-inline-start: 2rem;
+    }
+
+    .nav_links ul li a {
+        padding-block-end: 2rem;
+        inline-size: 100%;
+    }
+
+    a ion-icon {
+        position: relative;
+        inset-block-start: .1rem;
+    }
+
+    .drop-down {
+        background: none;
+        box-shadow: none;
+    }
+
+    .nav_form {
+        position: absolute;
+        inset-block-start: 5rem;
+        flex-direction: column;
+        inset-inline-end: 0;
+        gap: 1rem;
+        inset-inline-start: 55%;
+        display: flex;
+        margin-block-start: 18rem;
+    }
+
+    #company {
+        color: var(--color-md-gray);
+        margin-inline-start: 1rem;
+    }
+
+    .btn_primary {
+        inline-size: 120%;
+        margin-inline-start: -3rem;
+    }
+
+    .menu_btn {
+        display: block;
+    }
+
+}
