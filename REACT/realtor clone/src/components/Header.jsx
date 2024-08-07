@@ -16,7 +16,7 @@ export const Header = () => {
             setPageState("Sign In")
         }
     })
-  })
+  }, [auth])
 
 
   function pathBorder(route) {
