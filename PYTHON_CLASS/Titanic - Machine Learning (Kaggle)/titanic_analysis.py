@@ -1,101 +1,102 @@
 import pandas as pd
-import seaborn as sns
+import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
-# Switch to the Agg backend
-plt.switch_backend('Agg')
+# Load the data
+train = pd.read_csv('train.csv')
+test = pd.read_csv('test.csv')
 
-# Load training data
-train_data = pd.read_csv('train.csv')
+# Data overview
+print(train.head())
+print(train.describe())
+print(train.info())
 
-print(train_data.head())
+# Data visualization
+sns.countplot(x='Survived', data=train)
+plt.title('Survival Count')
+plt.show()
 
-# Summary statistics
-summary_stats = train_data.describe()
-print(summary_stats)
+sns.countplot(x='Pclass', data=train)
+plt.title('Passenger Class Distribution')
+plt.show()
 
-# Check missing values
-missing_values = train_data.isnull().sum()
-print(missing_values)
-
-# Visualizing the distribution
-plt.figure(figsize=(8,6))
-sns.countplot(x='Survived', data=train_data)
-plt.title('Survival Distribution')
-plt.savefig('survival_distribution.png')
-plt.close()
-
-# Visualize the distribution of passenger class
-plt.figure(figsize=(8,6))
-sns.countplot(x='Pclass', data=train_data)
-plt.title('Passenger Distribution')
-plt.savefig('passenger-distribution.png')
-plt.close()
-
-# Distribution of age
-plt.figure(figsize=(8,6))
-sns.histplot(train_data['Age'].dropna(), kde=True)
+sns.histplot(train['Age'].dropna(), kde=True)
 plt.title('Age Distribution')
-plt.savefig('age-distribution.png')
-plt.close()
+plt.show()
 
-# Survival rate visual
-plt.figure(figsize=(8,6))
-sns.barplot(x='Sex', y='Survived', data=train_data)
+sns.barplot(x='Sex', y='Survived', data=train)
 plt.title('Survival Rate by Gender')
-plt.savefig('survival_rate(Gender).png')
-plt.close()
+plt.show()
 
-# Survival rate by Passenger Class
-plt.figure(figsize=(8,6))
-sns.barplot(x='Pclass', y='Survived', data=train_data)
+sns.barplot(x='Pclass', y='Survived', data=train)
 plt.title('Survival Rate by Passenger Class')
-plt.savefig('survival_rate(Passenger-class).png')
-plt.close()
+plt.show()
 
-# Missing values in 'Age', 'Embarked' and 'drop Cabin column'
-train_data['Age'].fillna(train_data['Age'].median(), inplace=True)
-train_data['Embarked'].fillna(train_data['Embarked'].mode()[0], inplace=True)
-train_data.drop(columns=['Cabin'], inplace=True)
+# Data preprocessing
+train['Age'].fillna(train['Age'].median(), inplace=True)
+train['Embarked'].fillna(train['Embarked'].mode()[0], inplace=True)
+train.drop(columns=['Cabin'], inplace=True)
 
-# Convert variables to Numerical
-train_data['Sex'] = train_data['Sex'].map({'male': 0, 'female': 1})
-train_data['Embarked'] = train_data['Embarked'].map({'C': 0, 'Q': 1, 'S': 2})
+test['Age'].fillna(test['Age'].median(), inplace=True)
+test['Fare'].fillna(test['Fare'].median(), inplace=True)
+test['Embarked'].fillna(test['Embarked'].mode()[0], inplace=True)
+test.drop(columns=['Cabin'], inplace=True)
 
-# Create a new feature 'FamilySize'
-train_data['FamilySize'] = train_data['SibSp'] + train_data['Parch'] + 1
+train['Sex'] = train['Sex'].map({'male': 0, 'female': 1})
+test['Sex'] = test['Sex'].map({'male': 0, 'female': 1})
 
-# Extract titles from 'Name'
-train_data['Title'] = train_data['Name'].str.extract(r' ([A-Za-z]+)\.', expand=False)
-# Replace rare titles with 'Rare'
-train_data['Title'] = train_data['Title'].replace(['Lady', 'Countess', 'Capt', 'Col', 'Don', 'Dr', 'Major', 'Rev', 'Sir', 'Jonkheer', 'Dona'], 'Rare')
-train_data['Title'] = train_data['Title'].replace('Mlle', 'Miss')
-train_data['Title'] = train_data['Title'].replace('Ms', 'Miss')
-train_data['Title'] = train_data['Title'].replace('Mme', 'Mrs')
+train['Embarked'] = train['Embarked'].map({'C': 0, 'Q': 1, 'S': 2})
+test['Embarked'] = test['Embarked'].map({'C': 0, 'Q': 1, 'S': 2})
 
-# Map titles to numerical values
+train['FamilySize'] = train['SibSp'] + train['Parch'] + 1
+test['FamilySize'] = test['SibSp'] + test['Parch'] + 1
+
+train['Title'] = train['Name'].str.extract(' ([A-Za-z]+)\.', expand=False)
+train['Title'] = train['Title'].replace(['Lady', 'Countess', 'Capt', 'Col',
+                                         'Don', 'Dr', 'Major', 'Rev', 'Sir', 'Jonkheer', 'Dona'], 'Rare')
+train['Title'] = train['Title'].replace('Mlle', 'Miss')
+train['Title'] = train['Title'].replace('Ms', 'Miss')
+train['Title'] = train['Title'].replace('Mme', 'Mrs')
+
+test['Title'] = test['Name'].str.extract(' ([A-Za-z]+)\.', expand=False)
+test['Title'] = test['Title'].replace(['Lady', 'Countess', 'Capt', 'Col',
+                                       'Don', 'Dr', 'Major', 'Rev', 'Sir', 'Jonkheer', 'Dona'], 'Rare')
+test['Title'] = test['Title'].replace('Mlle', 'Miss')
+test['Title'] = test['Title'].replace('Ms', 'Miss')
+test['Title'] = test['Title'].replace('Mme', 'Mrs')
+
 title_mapping = {"Mr": 1, "Miss": 2, "Mrs": 3, "Master": 4, "Rare": 5}
-train_data['Title'] = train_data['Title'].map(title_mapping)
-train_data['Title'].fillna(0, inplace=True)
+train['Title'] = train['Title'].map(title_mapping)
+train['Title'] = train['Title'].fillna(0)
 
-# MODEL TRAINING
-X = train_data.drop(columns=['PassengerId', 'Survived', 'Name', 'Ticket'])
-y = train_data['Survived']
+test['Title'] = test['Title'].map(title_mapping)
+test['Title'] = test['Title'].fillna(0)
 
+# Dropping columns not needed for prediction
+X = train.drop(columns=['PassengerId', 'Survived', 'Name', 'Ticket'])
+y = train['Survived']
+
+# Train-test split
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
+# Train the Random Forest model
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X_train, y_train)
 
+# Validate the model
 y_pred = model.predict(X_val)
 accuracy = accuracy_score(y_val, y_pred)
-print(f"Validation Accuracy: {accuracy:.2f}")
+print(f'Model accuracy: {accuracy:.2f}')
 
-# Make predictions on test data
-test_data = pd.read_csv('test.csv')
+# Prepare the test data for prediction
+test_data = test.drop(columns=['PassengerId', 'Name', 'Ticket'])
+
+# Make predictions on the test data
+predictions = model.predict(test_data)
 
 test_data['Age'].fillna(test_data['Age'].median(), inplace=True)
 test_data['Embarked'].fillna(test_data['Embarked'].mode()[0], inplace=True)
@@ -117,8 +118,8 @@ test_predictions = model.predict(X_test)
 
 # Submission file
 submission = pd.DataFrame({
-    'PassengerId': test_data['PassengerId'],
-    'Survived': test_predictions
+    'PassengerId': test['PassengerId'],
+    'Survived': predictions
 })
 
 submission.to_csv('submission.csv', index=False)
