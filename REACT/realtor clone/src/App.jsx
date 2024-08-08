@@ -13,6 +13,7 @@ import Buy from "./pages/Buy";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import PrivateRoute from "./components/PrivateRoute";
+import CreateListing from "./pages/CreateListing";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/rent" element={<Rent />} />
           <Route path="/mortgage" element={<mortgage />} />
           <Route path="/myhome" element={<MyHome />} />
+          <Route path="/create-listing" element={<CreateListing />} />
           <Route path="/profile" element={<PrivateRoute />}>
             <Route path="/profile" element={<Profile />} />
           </Route>
