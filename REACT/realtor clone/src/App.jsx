@@ -5,15 +5,12 @@ import Profile from "./pages/Profile";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import ForgotPassword from "./pages/ForgotPassword";
-import Sell from "./pages/Sell";
 import { Header } from "./components/Header";
-import Rent from "./pages/Rent";
-import MyHome from "./pages/MyHome";
-import Buy from "./pages/Buy";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import PrivateRoute from "./components/PrivateRoute";
 import CreateListing from "./pages/CreateListing";
+import Offers from "./pages/Offers"
 
 function App() {
   return (
@@ -22,18 +19,16 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/buy" element={<Buy />} />
-          <Route path="/sell" element={<Sell />} />
-          <Route path="/rent" element={<Rent />} />
-          <Route path="/mortgage" element={<mortgage />} />
-          <Route path="/myhome" element={<MyHome />} />
-          <Route path="/create-listing" element={<CreateListing />} />
           <Route path="/profile" element={<PrivateRoute />}>
             <Route path="/profile" element={<Profile />} />
           </Route>
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/offers" element={<Offers />} />
+          <Route path="/create-listing" element={<PrivateRoute />}>
+            <Route path="/create-listing" element={<CreateListing />} />
+          </Route>
         </Routes>
       </Router>
       <ToastContainer

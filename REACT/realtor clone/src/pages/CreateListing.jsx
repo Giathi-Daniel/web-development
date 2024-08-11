@@ -30,7 +30,33 @@ export default function CreateListing() {
     discountedPrice,
   } = formData;
 
-  function onChange() {}
+  function onChange(e) {
+    let boolean = null;
+    if (e.target.value === "true") {
+      boolean = true;
+    }
+
+    if (e.target.value === "false") {
+      boolean = false;
+    }
+
+    //files
+    if (e.target.files) {
+      setFormData((prevState) => ({
+        ...prevState,
+        images: e.target.files,
+      }));
+    }
+
+    // Text-boolean-number
+    if (!e.target.files) {
+      setFormData((prevState) => ({
+        ...prevState,
+        [e.target.id]: boolean ?? e.target.value,
+      }));
+    }
+  }
+
   return (
     <main className="max-w-md px-2 mx-auto">
       <div className="text-3xl mt-6 font-bold">
@@ -42,7 +68,7 @@ export default function CreateListing() {
               type="button"
               id="type"
               value="sale"
-              onClick={onchange}
+              onClick={onChange}
               className={`mr-3 px-7 py-3 font-medium text-sm uppercase shadow-md rounded hover:shadow-lg focus:shadow-lg active:shadow-lg transition 150 ease-in-out w-full ${
                 type === "rent"
                   ? "bg-white text-black"
@@ -54,8 +80,8 @@ export default function CreateListing() {
             <button
               type="button"
               id="type"
-              value="sale"
-              onClick={onchange}
+              value="rent"
+              onClick={onChange}
               className={`ml-3 px-7 py-3 font-medium text-sm uppercase shadow-md rounded hover:shadow-lg focus:shadow-lg active:shadow-lg transition 150 ease-in-out w-full ${
                 type === "sale"
                   ? "bg-white text-black"
@@ -115,7 +141,7 @@ export default function CreateListing() {
               type="button"
               id="parking"
               value={true}
-              onClick={onchange}
+              onClick={onChange}
               className={`mr-3 px-7 py-3 font-medium text-sm uppercase shadow-md rounded hover:shadow-lg focus:shadow-lg active:shadow-lg transition 150 ease-in-out w-full ${
                 !parking ? "bg-white text-black" : "bg-slate-600 text-white"
               }`}
@@ -126,7 +152,7 @@ export default function CreateListing() {
               type="button"
               id="parking"
               value={false}
-              onClick={onchange}
+              onClick={onChange}
               className={`ml-3 px-7 py-3 font-medium text-sm uppercase shadow-md rounded hover:shadow-lg focus:shadow-lg active:shadow-lg transition 150 ease-in-out w-full ${
                 parking ? "bg-white text-black" : "bg-slate-600 text-white"
               }`}
@@ -141,7 +167,7 @@ export default function CreateListing() {
               type="button"
               id="furnished"
               value={true}
-              onClick={onchange}
+              onClick={onChange}
               className={`mr-3 px-7 py-3 font-medium text-sm uppercase shadow-md rounded hover:shadow-lg focus:shadow-lg active:shadow-lg transition 150 ease-in-out w-full ${
                 !furnished ? "bg-white text-black" : "bg-slate-600 text-white"
               }`}
@@ -152,7 +178,7 @@ export default function CreateListing() {
               type="button"
               id="furnished"
               value={false}
-              onClick={onchange}
+              onClick={onChange}
               className={`ml-3 px-7 py-3 font-medium text-sm uppercase shadow-md rounded hover:shadow-lg focus:shadow-lg active:shadow-lg transition 150 ease-in-out w-full ${
                 furnished ? "bg-white text-black" : "bg-slate-600 text-white"
               }`}
@@ -193,7 +219,7 @@ export default function CreateListing() {
               type="button"
               id="offer"
               value={true}
-              onClick={onchange}
+              onClick={onChange}
               className={`mr-3 px-7 py-3 font-medium text-sm uppercase shadow-md rounded hover:shadow-lg focus:shadow-lg active:shadow-lg transition 150 ease-in-out w-full ${
                 !offer ? "bg-white text-black" : "bg-slate-600 text-white"
               }`}
@@ -204,7 +230,7 @@ export default function CreateListing() {
               type="button"
               id="offer"
               value={false}
-              onClick={onchange}
+              onClick={onChange}
               className={`ml-3 px-7 py-3 font-medium text-sm uppercase shadow-md rounded hover:shadow-lg focus:shadow-lg active:shadow-lg transition 150 ease-in-out w-full ${
                 offer ? "bg-white text-black" : "bg-slate-600 text-white"
               }`}

@@ -42,41 +42,17 @@ export const Header = () => {
               className={`cursor-pointer py-3 text-md font-semibold border-b-[3px] border-b-transparent ${
                 pathBorder("/") && "text-black border-b-red-500"
               }`}
-              onClick={() => navigate("/buy")}
+              onClick={() => navigate("/")}
             >
-              Buy
+              Home
             </li>
             <li
               className={`cursor-pointer py-3 text-md font-semibold border-b-[3px] border-b-transparent ${
-                pathBorder("/sell") && "text-black border-b-red-500"
+                pathBorder("/offers") && "text-black border-b-red-500"
               }`}
-              onClick={() => navigate("/sell")}
+              onClick={() => navigate("/offers")}
             >
-              Sell
-            </li>
-            <li
-              className={`cursor-pointer py-3 text-md font-semibold border-b-[3px] border-b-transparent ${
-                pathBorder("/rent") && "text-black border-b-red-500"
-              }`}
-              onClick={() => navigate("/rent")}
-            >
-              Rent
-            </li>
-            <li
-              className={`cursor-pointer py-3 text-md font-semibold border-b-[3px] border-b-transparent ${
-                pathBorder("/mortgage") && "text-black border-b-red-500"
-              }`}
-              onClick={() => navigate("/mortgage")}
-            >
-              Mortgage
-            </li>
-            <li
-              className={`cursor-pointer py-3 text-md font-semibold border-b-[3px] border-b-transparent ${
-                pathBorder("/myhome") && "text-black border-b-red-500"
-              }`}
-              onClick={() => navigate("/myhome")}
-            >
-              My Home
+              Offers
             </li>
           </ul>
         </div>
