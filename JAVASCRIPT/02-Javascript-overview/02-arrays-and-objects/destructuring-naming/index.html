@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring and Naming</title>
+</head>
+<body>
+    
+
+    <script>
+        // naming
+        const firstName = 'John';
+        const lastName = 'Doe';
+        const age = 20;
+
+        const person = {
+            firstName,
+            lastName,
+            age,
+        }
+
+        console.log(person.age)
+
+        // Destructuring
+        const todo = {
+            id: 1,
+            title: 'Take out trash',
+            user: {
+                name: 'John'
+            }
+        }
+
+        // const id = todo.id;
+
+        // destructure curlt braces used in destructuring
+        const {
+             id: todoId,  //change id
+             title, 
+             user: { name } 
+        } = todo
+
+        console.log(todoId, title, name)
+
+        // Destructure arrays ...rest operator
+        const numbers = [25, 15, 56, 96, 89]
+
+        const [first, second, ...rest ] = numbers;
+
+        console.log(first, second, rest)
+    </script>
+</body>
+</html>

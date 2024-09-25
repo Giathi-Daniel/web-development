@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.filter()</title>
+</head>
+<body>
+    <h1>.filter()</h1>
+
+    <script>
+        // filter out positive numbers -> creates a new array
+        // returns elements that are truevto the new array
+        const removeNegativeNumbers = [1, -3, 5].filter((value, index) => {
+            // if (value >= 0) {
+            //     return true;
+            // } else {
+            //     return false;
+            // }
+
+            return value >= 0
+        })
+
+        console.log(removeNegativeNumbers)
+
+        // get even number
+        const numbers = [1,2,3,4,5,6,7,8,9,10];
+
+        // const evenNumbers = numbers.filter((number) => {
+        //     return number % 2 === 0;
+        // })
+
+        // shorthand
+        const evenNumbers = numbers.filter(number => number % 2 === 0)
+        console.log(evenNumbers);
+
+        // forEach()
+        numbers.forEach((number) => {
+            // if (number % 2 === 0) {
+            //     console.log(number)
+            // }
+
+            const evenNumbers = []
+            evenNumbers.push(number) 
+        });
+    </script>
+</body>
+</html>

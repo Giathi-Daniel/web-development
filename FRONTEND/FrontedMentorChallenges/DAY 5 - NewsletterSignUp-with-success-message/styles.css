@@ -1,0 +1,256 @@
+/* ======================= GENERAL STYLING =======================  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+:root {
+    --bg-color: hsl(234, 29%, 20%);
+    --heading-color: hsl(235, 18%, 26%);
+    --primary-color: hsl(231, 7%, 60%);
+    --main-bg: hsl(0, 0%, 100%);
+    --primary-bg: hsl(4, 100%, 67%);
+    --transition: all 400ms;
+}
+
+body {
+    line-height: 1.2rem;
+    font-size: 1.2rem;
+    font-family: "Roboto", sans-serif;
+}
+
+h1 {
+    font-size: 2.6rem;
+    color: var(--bg-color);
+    margin-block-start: .5rem;
+    margin-block-end: 1.5rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: .7rem;
+    color: var(--primary-color);
+    margin-block: .3rem;
+    display: flex;
+    gap: .5rem;
+}
+
+p>svg {
+    inline-size: .8rem;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    background: var(--bg-color);
+    padding-block: .7rem;
+    inline-size: 100%;
+    font-size: .5rem;
+    font-weight: 700;
+    border-radius: .2rem;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background: var(--primary-bg);
+    box-shadow: 0px 3px 8px var(--primary-bg);
+}
+
+/* ============================== MAIN ==============================  */
+.container {
+    margin: 3rem auto;
+    background: var(--heading-color);
+    padding: 5rem;
+    inline-size: 70%;
+    block-size: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.sign_up-container {
+    background: var(--main-bg);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    block-size: 60vh;
+    border-radius: 1rem;
+    padding: 2rem 0 2rem 2rem;
+    inline-size: 80%;
+}
+
+.form_text {
+    padding-block-start: 1.5rem;
+}
+
+.form_image {
+    inline-size: 100%;
+    block-size: 100%;
+    position: relative;
+}
+
+.form_image svg {
+    block-size: 55vh;
+    inline-size: 100%;
+    position: absolute;
+    inset-inline-end: -1rem;
+    inset-block-start: -1rem;
+}
+
+label {
+    display: block;
+    font-size: .7rem;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    margin-block-end: .5rem;
+}
+
+input {
+    border: 1px solid var(--primary-color);
+    border-radius: .2rem;
+    inline-size: 100%;
+    margin-block-end: 1rem;
+    padding-block: .5rem;
+    padding-inline-start: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: "Roboto", sans-serif;
+}
+
+input:hover {
+    border: 1px solid #000;
+}
+
+.success_msg {
+    position: absolute;
+    background: var(--main-bg);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    inline-size: 35%;
+    padding: 2rem;
+    display: none;
+}
+
+/* .success_msg.active {
+    display: block;
+} */
+
+.msg_container {
+    inline-size: 100%;
+}
+
+.msg_container svg {
+    background: var(--primary-bg);
+    display: flex;
+    border-radius: 50%;
+    inline-size: 2rem;
+    block-size: 2rem;
+    margin-block-end: 2rem;
+}
+
+.success_title {
+    font-size: 2rem;
+    line-height: 2rem;
+    margin-block-end: .9rem;
+}
+
+.msg_container p {
+    color: #000;
+}
+
+.msg_container .btn {
+    font-size: .6rem;
+}
+
+/* ============================== FOOTER ==============================  */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+/* ============================== MEDIA QUERIES ==============================  */
+/* ====================== MEDIUM SCREENS ======================  */
+@media screen and (max-width: 1024px) {
+    .container {
+        inline-size: 90%;
+        padding: 0;
+
+    }
+
+    .sign_up-container {
+        grid-template-columns: 1fr;
+        inline-size: 80%;
+        margin-block-start: -20rem;
+        padding: 2rem;
+        block-size: 40rem;
+    }
+
+}
+
+/* ====================== SMALL SCREENS ======================  */
+@media screen and (max-width: 764px) {
+    .container {
+        inline-size: 100%;
+        padding: 0;
+        background: var(--main-bg);
+    }
+
+    .sign_up-container {
+        grid-template-columns: 1fr;
+        inline-size: 100%;
+        padding: 0;
+        block-size: 100vh;
+    }
+
+    h1 {
+        margin-block-start: 30rem;
+        margin-inline-start: 2rem;
+    }
+
+    p {
+        margin-inline-start: 1.5rem;
+        font-size: 1.3rem;
+        margin-block: .9rem;
+        line-height: 2rem;
+        margin-inline-end: .5rem;
+    }
+
+    p>svg {
+        inline-size: 2rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        inline-size: 90%;
+    }
+
+    form {
+        margin-inline-start: 1.5rem
+    }
+
+    label {
+        font-size: 1rem;
+        margin-block-end: 1rem;
+    }
+
+    input {
+        inline-size: 90%;
+    }
+
+    input::placeholder {
+        font-size: 1rem;
+    }
+}

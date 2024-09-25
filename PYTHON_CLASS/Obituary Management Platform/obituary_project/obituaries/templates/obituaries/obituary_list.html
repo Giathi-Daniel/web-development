@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Obituaries</title>
+</head>
+<body>
+    <h1>Obituaries</h1>
+    <a href="{% url static 'obituaries/templates/add_obituary' %}">Add New Obituary</a>
+    <h2>Obituaries</h2>
+    <!-- <ul>
+        {% for obituary in obituaries %}
+            <li>{{ obituary.name }} - {{ obituary.date_of_birth }} - {{ obituary.date_of_death }} - {{ obituary.content }} - {{ obituary.author }} - {{ obituary.submission_date }}</li>
+        {% endfor %}
+    </ul> -->
+
+    <!-- <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Date of Birth</th>
+                <th>Date of Death</th>
+                <th>Content</th>
+                <th>Author</th>
+                <th>Submission Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for obituary in obituaries %}
+            <tr>
+                <td>{{ obituary.name }}</td>
+                <td>{{ obituary.date_of_birth }}</td>
+                <td>{{ obituary.date_of_death }}</td>
+                <td>{{ obituary.content }}</td>
+                <td>{{ obituary.author }}</td>
+                <td>{{ obituary.submission_date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table> -->
+</body>
+</html>

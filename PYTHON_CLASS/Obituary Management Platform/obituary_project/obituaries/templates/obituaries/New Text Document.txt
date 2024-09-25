@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="Obituary for {{ obituary.name }}">
+    <meta name="keywords" content="obituary, {{ obituary.name }}">
+    <meta property="og:title" content="Obituary for {{ obituary.name }}">
+    <meta property="og:description" content="{{ obituary.content }}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{ request.build_absolute_uri }}">
+    <meta property="og:image" content="URL_to_some_image">
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Obituary",
+        "headline": "Obituary for {{ obituary.name }}",
+        "datePublished": "{{ obituary.submission_date|date:"Y-m-d" }}",
+        "description": "{{ obituary.content }}"
+    }
+    </script>
+
+    <title>Obituaries</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'obituaries/styles.css' %}">
+</head>
+<body>
+    <h1>Obituaries</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Date of Birth</th>
+            <th>Date of Death</th>
+            <th>Content</th>
+            <th>Author</th>
+            <th>Submission Date</th>
+        </tr>
+        {% for obituary in obituaries %}
+        <tr>
+            <td>{{ obituary.name }}</td>
+            <td>{{ obituary.date_of_birth }}</td>
+            <td>{{ obituary.date_of_death }}</td>
+            <td>{{ obituary.content }}</td>
+            <td>{{ obituary.author }}</td>
+            <td>{{ obituary.submission_date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

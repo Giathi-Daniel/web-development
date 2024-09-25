@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with objects</title>
+</head>
+<body>
+    
+    <script>
+        // challenge library array with 3 objects
+        // **** step 1 ***
+        const library = [
+            {
+                title: 'Test library',
+                author: 'John Smith',
+                status: {
+                    own: true,
+                    reading: false, 
+                    read: false
+                }
+            },
+            {
+                title: 'Discipline equals freedom',
+                author: 'John Smith',
+                status: {
+                    own: true,
+                    reading: false, 
+                    read: false
+                }
+            },
+            {
+                title: 'Mockingjay',
+                author: 'Suzanne Collins',
+                status: {
+                    own: true,
+                    reading: false, 
+                    read: false
+                }
+            },
+        ]
+
+        // **** step 2 ***
+        // library.forEach(obj, ()=> {
+        //     status.read = true
+        // })
+
+        library[0].status.read = true;
+        library[1].status.read = true;
+        library[2].status.read = true;
+
+        console.log(library)
+
+        // **** step 3 ***
+        // Destructure title to titleBook
+        const { title: firstBook } = library[0]
+        
+
+        console.log(firstBook) // get the firstBook variable
+
+         // **** step 3 -> library object into a JSON string ***
+         const str3 = JSON.stringify(library)
+         console.log(str3) // get the library string
+    </script>
+</body>
+</html>

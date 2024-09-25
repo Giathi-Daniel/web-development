@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 2</title>
+</head>
+<body>
+    <h1>Function Challenges</h1>
+
+    <!-- function called minMax() takes an array of numbers and returns an object with the minimum
+    and max number of arrays -->
+
+    <script>
+    function minMax(arr) {
+        const min = Math.min(...arr);
+        const max = Math.max(...arr);
+
+        return {
+            min,
+            max,
+        }
+    }
+
+    console.log(minMax([1,5,6,4,3]));
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Alex Brush', cursive;
+    font-size: 50px;
+    text-align: center;
+}
+
+#stories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.story {
+    background-color: #eee;
+    padding: 15px;
+    inline-size: 25%;
+    font-size: 15px;
+    text-align: start;
+    font-weight: 600;
+}
+
+.story:hover {
+    cursor: pointer;
+    background-color: #fc4103;
+    color: #fff;
+}

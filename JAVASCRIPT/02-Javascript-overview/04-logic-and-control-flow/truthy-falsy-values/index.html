@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truthy & Falsy values</title>
+</head>
+<body>
+    <h1>Truthy & Falsy Values</h1>
+
+    <script>
+        // Falsy values:
+        // - false
+        // - 0
+        // - "" or ''
+        // - null
+        // - undefined
+        // - Nan
+        const x = 0
+        console.log(Boolean(x))
+
+        // Truthy values
+        // - true
+        // - '0' (0 in a String)
+        // - ' ' (space in a string)
+        // - 'false' (false in a String)
+        // - [] (empty array)
+        // - {} (empty object)
+        // function () {} (empty function)
+        const y = '0'
+        console.log(Boolean(y))
+
+        // Truthy and falsy caveats
+        const children = 0;
+
+        if (children) {
+            console.log(`You have ${children} children`);
+        } else {
+            console.log('Please enter number of children')
+        }
+
+        // sln
+        // const children = 3;
+
+        // if (!isNaN(children)) {
+        //     console.log(`You have ${children} children`);
+        // } else {
+        //     console.log('Please enter number of children')
+        // }
+
+        // Checking for empty arrays
+        // scenario 1
+        // const fruits = ['mangoes', 'apples', 'oranges']
+
+        // if(fruits) {
+        //     console.log('Available fruit list')
+        // } else {
+        //     console.log('No available fruit list') 
+        // }
+
+        // scenario 2
+        // const fruits = []
+
+        // if(fruits) {
+        //     console.log('Available fruit list')
+        // } else {
+        //     console.log('No available fruit list') // not displayed because empty array is a truthy value
+        // }
+
+         // scenario 2 -> sln
+         const fruits = []
+
+        if(fruits.length) {
+            console.log('Available fruit list')
+        } else {
+            console.log('No available fruit list') 
+        }
+
+        // checking empty objects with sln
+        const user = {
+            // name: 'anonymous'
+        }
+
+        if(Object.keys(user).length) {
+            console.log('List user')
+        } else {
+            console.log('No user list')
+        }
+    </script>
+</body>
+</html>

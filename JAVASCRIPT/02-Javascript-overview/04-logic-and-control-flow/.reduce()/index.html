@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reduce</title>
+</head>
+<body>
+    <h1>.reduce()</h1>
+
+   <script>
+    // effective in shopping cart
+        const arr = [1,2,4,5,6,7,8,9]
+
+        // const sum = arr.reduce(function (previousValue, currentValue) {
+        //     return previousValue + currentValue
+        // }, 0)
+
+        const sum = arr.reduce((prev, curr) => prev + curr)
+        console.log(sum)
+
+        const cart = [
+            {
+                id: 1,
+                name: 'product 1',
+                price: 150
+            },
+            {
+                id: 2,
+                name: 'product 2',
+                price: 100
+            },
+            {
+                id: 3,
+                name: 'product 3',
+                price: 130
+            }
+        ]
+        
+        // acc -> accumalator(or previousValue)
+        // const total = cart.reduce((acc, product) => acc + product.price)
+        const total = cart.reduce(function (acc, product) {
+            return acc + product.price
+        }, 0)
+        console.log(total)
+   </script>
+</body>
+</html>

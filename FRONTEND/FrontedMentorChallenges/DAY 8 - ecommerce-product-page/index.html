@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- KUMBH SANS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- TITLE -->
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="nav_container">
+          <a href="#" class="logo">sneakers</a>
+          <ul class="nav_list">
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <div class="nav_menu">
+            <img src="images/icon-cart.svg" class="cart" alt="" />
+            <img src="images/image-avatar.png" class="avatar" alt="" />
+          </div>
+
+          <div class="menu_btns">
+            <img src="images/icon-menu.svg" id="menuOpen" alt="" />
+            <img src="images/icon-close.svg" id="menuClose" alt="" />
+          </div>
+        </div>
+      </nav>
+
+      <section class="main_container">
+        <div class="product_images">
+          <div class="main_img">
+            <img src="images/image-product-1.jpg" alt="" />
+          </div>
+          <div class="image_thumbnails">
+            <a href="#"><img src="images/image-product-1-thumbnail.jpg" /></a>
+            <a href="#"><img src="images/image-product-2-thumbnail.jpg" /></a>
+            <a href="#"><img src="images/image-product-3-thumbnail.jpg" /></a>
+            <a href="#"><img src="images/image-product-4-thumbnail.jpg" /></a>
+          </div>
+        </div>
+        <div class="product_desc">
+          <h4>Sneaker Company</h4>
+          <h2>Fall Limited Edition Sneakers</h2>
+          <p>
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="products">
+            <div class="product_shop">
+              <h3>$125.00</h3>
+              <h6>50%</h6>
+            </div>
+            <p class="product_offer">$250.00</p>
+          </div>
+          <div class="product_cart_counter">
+            <div class="product_counter">
+              <button class="productDecrement">
+                <img src="images/icon-minus.svg" alt="" /></button
+              >0
+              <button class="productIncrement">
+                <img src="images/icon-plus.svg" alt="" />
+              </button>
+            </div>
+            <button class="product_cart">
+              <img src="images/icon-cart.svg" alt="" /> Add to cart
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Main Section -->
+
+      <!-- Footer section -->
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Blackshark</a>.
+      </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script src="script.js"></script>
+  </body>
+</html>

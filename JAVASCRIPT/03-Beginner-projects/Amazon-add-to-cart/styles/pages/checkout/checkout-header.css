@@ -1,0 +1,103 @@
+.checkout-header {
+    block-size: 60px;
+    padding-inline-start: 30px;
+    padding-inline-end: 30px;
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    inline-size: 100%;
+    max-inline-size: 1100px;
+
+    display: flex;
+    align-items: center;
+}
+
+.checkout-header-left-section {
+    inline-size: 150px;
+}
+
+.amazon-logo {
+    inline-size: 100px;
+    margin-block-start: 12px;
+}
+
+.amazon-mobile-logo {
+    display: none;
+}
+
+/* @media is used to create responsive design (making the
+     website look good on any screen size). This @media
+     means when the screen width is 575px or less, different
+     styles (inside the {...}) will be applied. */
+@media (max-inline-size: 575px) {
+    .checkout-header-left-section {
+        inline-size: auto;
+    }
+
+    .amazon-logo {
+        display: none;
+    }
+
+    .amazon-mobile-logo {
+        display: inline-block;
+        block-size: 35px;
+        margin-block-start: 5px;
+    }
+}
+
+.checkout-header-middle-section {
+    flex: 1;
+    flex-shrink: 0;
+    text-align: center;
+
+    font-size: 25px;
+    font-weight: 500;
+
+    display: flex;
+    justify-content: center;
+}
+
+.return-to-home-link {
+    color: rgb(0, 113, 133);
+    font-size: 23px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    .checkout-header-middle-section {
+        font-size: 20px;
+        margin-inline-end: 60px;
+    }
+
+    .return-to-home-link {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 575px) {
+    .checkout-header-middle-section {
+        margin-inline-end: 5px;
+    }
+}
+
+.checkout-header-right-section {
+    text-align: end;
+    inline-size: 150px;
+}
+
+@media (max-width: 1000px) {
+    .checkout-header-right-section {
+        inline-size: auto;
+    }
+}

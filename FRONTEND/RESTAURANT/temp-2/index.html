@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omnifood</title>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    
+    <!-- Swiper CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Header section -->
+    <header class="header">
+        <a href="#home" class="logo">diet</a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#services">services</a>
+            <a href="#diet">diet</a>
+            <a href="#pricing">pricing</a>
+            <a href="#review">review</a>
+            <!-- <a href="#contact">contact</a> -->
+        </nav>
+
+        <div class="fas fa-bars" id="menu"></div>
+    </header>
+    <!-- Header section end -->
+
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Welcome to the place full of healthy food</h3>
+            <a href="#about" class="btn">Get Started</a>
+        </div>
+    </section>
+    <!-- Home Section End -->
+
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h1 class="heading">about us</h1>
+        <div class="row">
+            <div class="content">
+                <h3>my mission is to give guideline to your health</h3>
+                <p> 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, asperiores. Voluptates eligendi debitis perspiciatis quo, officiis consequuntur. Cupiditate tempora animi doloremque iste aliquam suscipit est voluptatibus? Temporibus veritatis laboriosam dicta.
+                    Quis totam corrupti laboriosam dolores, nulla numquam optio. Tenetur doloribus pariatur accusamus nisi ut voluptatem, laboriosam ex tempore excepturi non autem eligendi corrupti cumque aperiam officiis perferendis voluptate incidunt facilis!
+                    Doloremque consequuntur deleniti ipsam minima vitae accusamus unde obcaecati alias saepe quisquam dolores earum beatae repellat aliquam aspernatur ipsa optio repellendus quos autem veniam voluptatem nihil, cum dolore! Dolore, fugiat.
+                </p>
+                <a href="#" class="btn">read more</a>
+            </div>
+
+            <div class="image">
+                <img src="images/about.jpg">
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h1 class="heading">Our Services</h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="icon">
+                    <img src="images/service-1.png">
+                </div>
+                <div class="content">
+                    <h3>arranging a nutrition plan</h3>
+                    <div class="line"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li><i class="fas fa-check"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li><i class="fas fa-check"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li><i class="fas fa-check"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <img src="images/service-2.png">
+                </div>
+                <div class="content">
+                    <h3>arranging a nutrition plan</h3>
+                    <div class="line"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li><i class="fas fa-check"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li><i class="fas fa-check"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li><i class="fas fa-check"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <img src="images/service-3.png">
+                </div>
+                <div class="content">
+                    <h3>arranging a nutrition plan</h3>
+                    <div class="line"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li><i class="fas fa-check"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li><i class="fas fa-check"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li><i class="fas fa-check"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section End -->
+
+
+    <!-- Diet Section -->
+    <section class="diet" id="diet">
+        <h1 class="heading">diet plan</h1>
+
+        <ul class="controls">
+            <li class="buttons active" data-filter="all">
+                <img src="images/diet-1.png">
+                <h3>all</h3>
+            </li>
+            <li class="buttons" data-filter="breakfast">
+                <img src="images/diet-2.png">
+                <h3>breakfast</h3>
+            </li>
+            <li class="buttons" data-filter="lunch">
+                <img src="images/diet-3.png">
+                <h3>lunch</h3>
+            </li>
+            <li class="buttons" data-filter="dinner">
+                <img src="images/diet-4.png">
+                <h3>dinner</h3>
+            </li>
+        </ul>
+
+        <div class="image-container">
+            <div class="box lunch">
+                <div class="image">
+                    <img src="images/diet-blog.png">
+                </div>
+                <div class="content">
+                    <a href="#" class="link">Lorem ipsum dolor sit</a>
+                    <p> elit. Dolorem neque quia facilis dolor sed! Eaque vitae eius cupiditate expedita officia.</p>
+                    <div class="icon">
+                        <a href="#"><i class="fas fa-clock"></i>01 January, 2024</a>
+                        <a href="#"><i class="fas fa-user"></i>by admin</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box breakfast">
+                <div class="image">
+                    <img src="images/diet-blog2.jpg">
+                </div>
+                <div class="content">
+                    <a href="#" class="link">Lorem ipsum dolor sit</a>
+                    <p> elit. Dolorem neque quia facilis dolor sed! Eaque vitae eius cupiditate expedita officia.</p>
+                    <div class="icon">
+                        <a href="#"><i class="fas fa-clock"></i>01 January, 2024</a>
+                        <a href="#"><i class="fas fa-user"></i>by admin</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box breakfast">
+                <div class="image">
+                    <img src="images/diet-blog3.jpg">
+                </div>
+                <div class="content">
+                    <a href="#" class="link">Lorem ipsum dolor sit</a>
+                    <p> elit. Dolorem neque quia facilis dolor sed! Eaque vitae eius cupiditate expedita officia.</p>
+                    <div class="icon">
+                        <a href="#"><i class="fas fa-clock"></i>01 January, 2024</a>
+                        <a href="#"><i class="fas fa-user"></i>by admin</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box breakfast">
+                <div class="image">
+                    <img src="images/diet-blog4.png">
+                </div>
+                <div class="content">
+                    <a href="#" class="link">Lorem ipsum dolor sit</a>
+                    <p> elit. Dolorem neque quia facilis dolor sed! Eaque vitae eius cupiditate expedita officia.</p>
+                    <div class="icon">
+                        <a href="#"><i class="fas fa-clock"></i>01 January, 2024</a>
+                        <a href="#"><i class="fas fa-user"></i>by admin</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box lunch">
+                <div class="image">
+                    <img src="images/diet-blog5.jpg">
+                </div>
+                <div class="content">
+                    <a href="#" class="link">Lorem ipsum dolor sit</a>
+                    <p> elit. Dolorem neque quia facilis dolor sed! Eaque vitae eius cupiditate expedita officia.</p>
+                    <div class="icon">
+                        <a href="#"><i class="fas fa-clock"></i>01 January, 2024</a>
+                        <a href="#"><i class="fas fa-user"></i>by admin</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box dinner">
+                <div class="image">
+                    <img src="images/diet-blog6.jpg">
+                </div>
+                <div class="content">
+                    <a href="#" class="link">Lorem ipsum dolor sit</a>
+                    <p> elit. Dolorem neque quia facilis dolor sed! Eaque vitae eius cupiditate expedita officia.</p>
+                    <div class="icon">
+                        <a href="#"><i class="fas fa-clock"></i>01 January, 2024</a>
+                        <a href="#"><i class="fas fa-user"></i>by admin</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box dinner">
+                <div class="image">
+                    <img src="images/diet-blog7.jpg">
+                </div>
+                <div class="content">
+                    <a href="#" class="link">Lorem ipsum dolor sit</a>
+                    <p> elit. Dolorem neque quia facilis dolor sed! Eaque vitae eius cupiditate expedita officia.</p>
+                    <div class="icon">
+                        <a href="#"><i class="fas fa-clock"></i>01 January, 2024</a>
+                        <a href="#"><i class="fas fa-user"></i>by admin</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box lunch">
+                <div class="image">
+                    <img src="images/diet-blog.png">
+                </div>
+                <div class="content">
+                    <a href="#" class="link">Lorem ipsum dolor sit</a>
+                    <p> elit. Dolorem neque quia facilis dolor sed! Eaque vitae eius cupiditate expedita officia.</p>
+                    <div class="icon">
+                        <a href="#"><i class="fas fa-clock"></i>01 January, 2024</a>
+                        <a href="#"><i class="fas fa-user"></i>by admin</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box breakfast">
+                <div class="image">
+                    <img src="images/diet-blog4.png">
+                </div>
+                <div class="content">
+                    <a href="#" class="link">Lorem ipsum dolor sit</a>
+                    <p> elit. Dolorem neque quia facilis dolor sed! Eaque vitae eius cupiditate expedita officia.</p>
+                    <div class="icon">
+                        <a href="#"><i class="fas fa-clock"></i>01 January, 2024</a>
+                        <a href="#"><i class="fas fa-user"></i>by admin</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Diet Section End -->
+
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <h1 class="heading">pricing plan</h1>
+
+        <div class="box-container">
+            <div class="box">
+                <h3 class="title">basic</h3>
+                <div class="price">
+                    <span class="currency">$</span>
+                    <span class="amount">70</span>
+                    <span class="duration"> /year</span>
+                </div>
+                <ul>
+                    <li><i class="fas fa-check"></i>nutrition plan</li>
+                    <li><i class="fas fa-check"></i> training plan</li>
+                    <li><i class="fas fa-check"></i> Body Measurement</li>
+                </ul>
+                <p>30 days consultation</p>
+                <p>3 personel meetings</p>
+                <p>$120 access to additional materials</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+            <div class="box">
+                <h3 class="title">Standard</h3>
+                <div class="price">
+                    <span class="currency">$</span>
+                    <span class="amount">30</span>
+                    <span class="duration"> /year</span>
+                </div>
+                <ul>
+                    <li><i class="fas fa-check"></i> nutrition plan</li>
+                    <li><i class="fas fa-check"></i> training plan</li>
+                    <li><i class="fas fa-check"></i> body measurement</li>
+                </ul>
+                <p>60 days consultation</p>
+                <p>10 personel meetings</p>
+                <p>free access to additional materials</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+            <div class="box">
+                <h3 class="title">premium</h3>
+                <div class="price">
+                    <span class="currency">$</span>
+                    <span class="amount">90</span>
+                    <span class="duration"> /year</span>
+                </div>
+                <ul>
+                    <li><i class="fas fa-check"></i> nutrition plan</li>
+                    <li><i class="fas fa-check"></i> training plan</li>
+                    <li><i class="fas fa-check"></i> body measurement</li>
+                </ul>
+                <p>90 days consultation</p>
+                <p>15 personel meetings</p>
+                <p>$120 access to additional materials</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing Section End -->
+
+
+    <!-- Review Section -->
+    <section class="reviews" id="review">
+        <h1 class="heading">Client's review</h1>
+
+        <div class="swiper review-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam voluptates cumque reiciendis.</p>
+                    <div class="user">
+                        <img src="images/user-1.jpg">
+                        <div class="info">
+                            <h3>Robert Henry</h3>
+                            <span>client</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide slide">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam voluptates cumque reiciendis.</p>
+                    <div class="user">
+                        <img src="images/user-1.jpg">
+                        <div class="info">
+                            <h3>Robert Henry</h3>
+                            <span>client</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide slide">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam voluptates cumque reiciendis.</p>
+                    <div class="user">
+                        <img src="images/user-1.jpg">
+                        <div class="info">
+                            <h3>Robert Henry</h3>
+                            <span>client</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide slide">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam voluptates cumque reiciendis.</p>
+                    <div class="user">
+                        <img src="images/user-1.jpg">
+                        <div class="info">
+                            <h3>Robert Henry</h3>
+                            <span>client</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide slide">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam voluptates cumque reiciendis.</p>
+                    <div class="user">
+                        <img src="images/user-1.jpg">
+                        <div class="info">
+                            <h3>Robert Henry</h3>
+                            <span>client</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide slide">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam voluptates cumque reiciendis.</p>
+                    <div class="user">
+                        <img src="images/user-1.jpg">
+                        <div class="info">
+                            <h3>Robert Henry</h3>
+                            <span>client</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Review Section End -->
+
+    
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="content">
+            <h1 class="heading">Subscribe now</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem voluptates odit doloremque ducimus minima distinctio corporis reprehenderit optio fuga cumque? Delectus unde quod temporibus ipsum eveniet ut amet quis inventore!</p>
+            <form action="">
+                <input type="email" placeholder="enter you email" class="email">
+                <input type="submit" value="subscribe" class="btn">
+            </form>
+        </div>
+    </section>
+    <!-- Newsletter Section End -->
+
+
+    <!-- Footer Section -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home"><i class="fas fa-arrow-right"></i>home</a>
+                <a href="#about"><i class="fas fa-arrow-right"></i>about</a>
+                <a href="#services"><i class="fas fa-arrow-right"></i>services</a>
+                <a href="#diet"><i class="fas fa-arrow-right"></i>diet</a>
+                <a href="#pricing"><i class="fas fa-arrow-right"></i>pricing</a>
+                <a href="#review"><i class="fas fa-arrow-right"></i>review</a>
+            </div>
+
+            <div class="box">
+                <h3>extra links</h3>
+                <a href="#"><i class="fas fa-arrow-right"></i>my account</a>
+                <a href="#"><i class="fas fa-arrow-right"></i>my order</a>
+                <a href="#"><i class="fas fa-arrow-right"></i>my wishlist</a>
+                <a href="#"><i class="fas fa-arrow-right"></i>ask questions</a>
+                <a href="#"><i class="fas fa-arrow-right"></i>terms of use</a>
+                <a href="#"><i class="fas fa-arrow-right"></i>privacy policy</a>
+            </div>
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#"><i class="fas fa-arrow-right"></i>+254 716 738 500</a>
+                <a href="#"><i class="fas fa-arrow-right"></i>giathidaniel252@gmail.com</a>
+                <a href="#"><i class="fas fa-arrow-right"></i>Kiambu, Ruiru 0232</a>
+            </div>
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
+                <a href="#"><i class="fab fa-twitter"></i>twitter</a>
+                <a href="#"><i class="fab fa-instagram"></i>instagram</a>
+                <a href="#"><i class="fab fa-linkedin"></i>linkedIn</a>
+                <a href="#"><i class="fab fa-github"></i>gihub</a>
+            </div>
+        </div>
+
+        <div class="credit">created by <span>blackshark</span> | all rights reserved</div>
+    </section>
+    <!-- Footer Section End -->
+
+   
+    <!-- jquery cdn -->
+    <script src="https://cdnjs.cloudfare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Swiper CDN  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- custom js -->
+    <script src="script.js"></script>
+</body>
+</html>

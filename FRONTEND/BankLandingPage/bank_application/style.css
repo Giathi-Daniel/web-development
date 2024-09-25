@@ -1,0 +1,50 @@
+:root{
+    --light-gray:rgb(240,240,240);
+    --medium-gray:rgb(210,210,210);
+    --dark-gray:rgb(52,58,65);
+    --darker-gray:rgb(46,52,59);
+    --red:rgb(220,53,68);
+    --dark-red:rgb(190,38,48);
+    --yellow:rgb(255,194,7);
+    --dark-yellow:rgb(215,174,7);
+    --light-blue:rgb(134,193,255);
+    --blue:rgb(1,123,255);
+    --dark-blue:rgb(1, 93, 215);
+    --green:rgb(110,157,120);
+    --dark-green:rgb(0,128,28);
+}
+main{
+    margin-left: 21%; 
+    margin-top: 80px;
+    margin-right: 10px;
+}
+.toggle_mobile_menu{
+    display: none;
+}
+#form{
+    width: 30vw; 
+}
+ul :hover{
+    background: var(--darker-gray);
+}
+.user_grid{
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+@media screen and (max-width:1200px) {
+    main{
+        margin-left: 1%;
+        margin-right: 5px;
+    }
+    .toggle_mobile_menu{
+        display: block;
+    }
+    .side_bar{
+        display: none;
+    }
+    #form{
+        width: 90vw; 
+    }
+}

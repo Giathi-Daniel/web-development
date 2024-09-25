@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Scope</title>
+</head>
+<body>
+    
+    <h1>Block Scope</h1>
+
+    <script>
+        for (let i = 0; i <= 10; i++) {
+            console.log(i)
+        }
+        // console.log(i)
+
+        if (true) {
+            const a = 500;
+            let b = 600;
+            var c = 700; //isNot a block scope -> function scope
+        }
+
+        // console.log(a)
+        // console.log(b)
+        console.log(c)
+
+        function run() {
+            var d = 100
+            console.log(d)
+        }
+        run();
+        // console.log(d) // a function scope
+    </script>
+</body>
+</html>

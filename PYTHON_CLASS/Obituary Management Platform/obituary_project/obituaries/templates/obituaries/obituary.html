@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Obituary for {{ obituary.name }}">
+    <meta name="keywords" content="obituary, {{ obituary.name }}">
+    <meta property="og:title" content="Obituary for {{ obituary.name }}">
+    <meta property="og:description" content="{{ obituary.content }}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{ request.build_absolute_uri }}">
+    <meta property="og:image" content="URL_to_some_image">
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Obituary",
+        "headline": "Obituary for {{ obituary.name }}",
+        "datePublished": "{{ obituary.submission_date|date:"Y-m-d" }}",
+        "description": "{{ obituary.content }}"
+    }
+    </script>
+
+    <title>Submit Obituary</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'obituaries/styles.css' %}">
+    <script src="{% static 'obituaries/validate.js' %}"></script>
+</head>
+<body>
+    <h1>Submit Obituary</h1>
+    <form method="POST" action="{% url 'submit_obituary' %}" onsubmit="return validateForm()" id="obituary-form">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="date_of_birth">Date of Birth:</label>
+        <input type="date" id="date_of_birth" name="date_of_birth" required><br>
+
+        <label for="date_of_death">Date of Death:</label>
+        <input type="date" id="date_of_death" name="date_of_death" required><br>
+
+        <label for="content">Content:</label>
+        <textarea id="content" name="content" required></textarea><br>
+
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" required><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Social Media -->
+    <div class="social-share">
+        <a href="https://twitter.com/intent/tweet?text={{ obituary.name }}%20-%20{{ obituary.content|urlencode }}" target="_blank" rel="noopener noreferrer">
+            <img src="{% static 'obituaries/twitter-icon.png' %}" alt="Share on Twitter">
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank" rel="noopener noreferrer">
+            <img src="{% static 'obituaries/facebook-icon.png' %}" alt="Share on Facebook">
+        </a>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}&title={{ obituary.name }}&summary={{ obituary.content|urlencode }}" target="_blank" rel="noopener noreferrer">
+            <img src="{% static 'obituaries/linkedin-icon.png' %}" alt="Share on LinkedIn">
+        </a>
+    </div>
+    
+    <a href="{% url 'view_obituaries' %}">Back to all obituaries</a>
+</body>
+</html>

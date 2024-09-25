@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGL Animation with Three.js</title>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        canvas { display: block; }
+        #controls {
+            position: fixed;
+            inset-block-start: 10px;
+            inset-inline-start: 17%;
+            transform: translateX(-50%);
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            inline-size: 400px; /* Adjust width as needed */
+        }
+        #controls label {
+            display: flex;
+            align-items: center;
+        }
+        #controls input[type="range"] {
+            inline-size: 100%;
+        }
+        #controls h3 {
+            grid-column: span 2; /* Title spans both columns */
+            margin: 0 0 10px 0;
+        }
+        #controls .checkbox-group {
+            grid-column: span 2; /* Checkbox group spans both columns */
+            display: flex;
+            justify-content: space-between;
+        }
+        #shapes-container {
+            position: absolute;
+            inset-block-start: 50%;
+            inset-inline-end: 0;
+            transform: translateY(-50%);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            block-size: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <h3>Controls</h3>
+        <label>
+            <input type="radio" name="shape" value="cube" checked> Cube
+        </label>
+        <label>
+            <input type="radio" name="shape" value="sphere"> Sphere
+        </label>
+        <label>
+            <input type="radio" name="shape" value="cone"> Cone
+        </label>
+        <label>
+            <input type="radio" name="shape" value="torus"> Torus
+        </label>
+        <label>
+            <input type="radio" name="shape" value="cylinder"> Cylinder
+        </label>
+        <label>
+            <input type="radio" name="shape" value="plane"> Plane
+        </label>
+        <label>
+            <input type="radio" name="shape" value="ring"> Ring
+        </label>
+        <label>
+            <input type="radio" name="shape" value="torusKnot"> Torus Knot
+        </label>
+        <label>
+            <input type="radio" name="shape" value="dodecahedron"> Dodecahedron
+        </label>
+        <label>
+            <input type="radio" name="shape" value="icosahedron"> Icosahedron
+        </label>
+        <label>Rotation Speed:</label>
+        <input type="range" id="speed" min="0" max="0.1" step="0.001" value="0.01">
+        <span id="speedValue">0.01</span>
+        <label>Scale X:</label>
+        <input type="range" id="scaleX" min="0.5" max="2" step="0.1" value="1">
+        <label>Scale Y:</label>
+        <input type="range" id="scaleY" min="0.5" max="2" step="0.1" value="1">
+        <label>Scale Z:</label>
+        <input type="range" id="scaleZ" min="0.5" max="2" step="0.1" value="1">
+        <label>Shear X:</label>
+        <input type="range" id="shearX" min="-1" max="1" step="0.1" value="0">
+        <label>Shear Y:</label>
+        <input type="range" id="shearY" min="-1" max="1" step="0.1" value="0">
+        <div class="checkbox-group">
+            <label>Reflect X:
+                <input type="checkbox" id="reflectX">
+            </label>
+            <label>Reflect Y:
+                <input type="checkbox" id="reflectY">
+            </label>
+            <label>
+                <input type="checkbox" id="lightToggle" checked> Lighting
+            </label>
+        </div>
+    </div>
+    <div id="shapes-container"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

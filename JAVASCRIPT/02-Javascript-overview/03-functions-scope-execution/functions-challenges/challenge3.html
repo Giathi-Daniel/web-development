@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 2</title>
+</head>
+<body>
+    <h1>Function Challenges</h1>
+
+    <!-- create an IFFE that takes in length and  width of a triangle and
+         displayed on the page when the window loads  
+    -->
+
+    <script>
+    ((length, width) => {
+        const area  = length * width;
+
+        const output = `The area of a rectangle with a length of ${length} and the width of ${width} is ${area}`;
+
+        console.log(output)
+    })(30, 5)
+
+    </script>
+</body>
+</html>

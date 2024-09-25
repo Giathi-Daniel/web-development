@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(37, 120, 4);
+    text-align: center;
+}
+
+div {
+    min-inline-size: 300px;
+    margin-inline: auto;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-block-start: 2rem;
+    color: goldenrod;
+}
+
+p {
+    color: #fff;
+    font-size: 1.7rem;
+    margin-block-end: 1.7rem;
+    font-weight: bolder;
+}
+
+button {
+    color: rgb(37, 120, 4);
+    inline-size: 200px;
+    background: goldenrod;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}

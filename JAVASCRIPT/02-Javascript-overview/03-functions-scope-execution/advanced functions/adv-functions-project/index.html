@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rock-paper-scissors</title>
+    <style>
+        body {
+        background-color: rgb(25, 25, 25);
+        color: white;
+        font-family: Arial;
+      }
+
+      .title {
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      .move-icon {
+        block-size: 50px;
+      }
+
+      .move-button {
+        inline-size: 120px;
+        block-size: 120px;
+        border-radius: 60px;
+        border: 3px solid white;
+
+        background-color: transparent;
+        margin-inline-end: 10px;
+        cursor: pointer;
+      }
+
+      .result {
+        font-size: 25px;
+        font-weight: bold;
+        margin-block-start: 50px;
+      }
+
+      .score {
+        margin-block-start: 60px;
+      }
+
+      .reset-score-button,
+      .auto-play-button {
+        background-color: white;
+        border: none;
+        font-size: 15px;
+        padding: 8px 15px;
+        cursor: pointer;
+      }
+    </style>
+</head>
+<body>
+    <p class="title">Rock Paper Scissors</p>
+
+    <button onclick="
+      makeMove('rock');
+    " class="move-button">
+      <img class="move-icon" src="images/rock-emoji.png">
+    </button>
+
+    <button onclick="
+      makeMove('paper');
+    " class="move-button">
+      <img class="move-icon" src="images/paper-emoji.png">
+    </button>
+
+    <button onclick="
+      makeMove('scissors');
+    " class="move-button">
+      <img class="move-icon" src="images/scissors-emoji.png">
+    </button>
+
+    <p class="result js-result"></p>
+    <p class="js-moves-chosen"></p>
+
+    <p class="score js-score"></p>
+
+    <button class="reset-score-button" onclick="
+      resetScore();
+    ">
+      Reset Score
+    </button>
+
+    <button class="auto-play-button js-auto-play-button" onclick="
+      autoPlay();
+    ">
+      Auto Play
+    </button>
+
+    <!-- script -->
+    <script src="script.js"></script>
+</body>
+</html>

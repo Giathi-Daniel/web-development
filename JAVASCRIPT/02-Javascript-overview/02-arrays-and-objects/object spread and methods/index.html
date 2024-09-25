@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object methods</title>
+  </head>
+  <body>
+    <script>
+      let x;
+
+      const obj1 = { a: 1, b: 2 };
+      const obj2 = { c: 3, d: 4 };
+
+      const obj3 = { ...obj1, ...obj2 }; // spread opertor
+
+      x = obj3;
+
+      const todos = [
+        { id: 1, name: "Buy Milk" },
+        { id: 2, name: "Take out trash" },
+        { id: 3, name: "Do homework" },
+      ];
+
+      x = todos[0].name;
+      x = Object.keys(todos); //get all keys
+      x = Object.entries(todos);
+
+      console.log(x);
+    </script>
+  </body>
+</html>

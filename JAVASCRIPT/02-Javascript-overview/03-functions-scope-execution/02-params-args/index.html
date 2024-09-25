@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parameters and arguments</title>
+</head>
+<body>
+    
+    <h1>Parameters and arguments</h1>
+
+    <script>
+        // Default parameters
+        function registerUser(user = 'Bot') {
+            // if(!user) {
+            //     user = 'bot';
+            // }
+
+            return user + ' is  registered'
+        }
+
+        console.log(registerUser());
+
+        // Rest Params -> pass as many args as you want
+        function sum(...numbers) {
+            let total = 0
+
+            // numbers.forEach(num, () => {
+            //     total += num;
+            // })
+
+            for (const num of numbers) {
+                total += num
+            }
+
+            return total
+        }
+
+        console.log(sum(2,3,1,5,6,7,5,8,4));
+
+        // Objects as params
+        const user = {
+            id: 0,
+            name: 'Henry'
+        }
+
+        function logInUser(user) {
+            return `User ${user.name} with the id of ${user.id} is logged in`;
+        }
+        console.log(logInUser(user));
+
+
+        // arrays as params
+        function getRandom(...arr) {
+            const randomIndex = Math.floor(Math.random() * arr.length);
+
+            const item = arr[randomIndex]
+
+            console.log(item)
+        }
+
+        getRandom(1,2,3,4,5,6,7,8,9,10)
+    </script> 
+</body>
+</html>

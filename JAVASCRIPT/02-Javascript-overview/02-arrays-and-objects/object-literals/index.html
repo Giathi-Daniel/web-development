@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object literals</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+        let x;
+
+        const person = {
+            name: 'John Doe',
+            age: 20,
+            isAdmin: true,
+            address: {
+                street: '123 Main Street',
+                city: 'San Francisco',
+                state: 'CA',
+            },
+            hobbies: ['music', 'karate'],
+        };
+
+        x = person.name;
+        x =person['age'];
+        x = person.address.street
+        x = person.hobbies[1]
+
+        delete person.age;
+        x= person
+
+        person.greet = function() {
+            console.log(`Good morning ${this.name}`);
+        }
+        person.greet();
+
+        console.log(x);
+
+        // returning an object in arrow function -> use ({}) 
+        const createObj = () => ({
+            name: 'Brad',
+        })
+        console.log(createObj())
+
+        // arrow function in a callback
+        const numbers = [1,2,3,4,5,6]
+
+        numbers.forEach(num => console.log(num))
+
+        // shorter arrow functions
+        const oneLine = () => 2 + 3;
+        console.log(oneLine());
+
+        // other uses of arrow funcction (in objects)
+        const object = {
+            method:  ()=> {
+
+            },
+            // method() {} //short hand of arrow funtion
+        }
+    </script>
+</body>
+</html>
