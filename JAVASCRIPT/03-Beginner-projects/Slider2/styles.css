@@ -1,0 +1,122 @@
+/*==css=======================================*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Open Sans',sans-serif;
+}
+a{
+    text-decoration: none;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+ 
+/*===Product-slider=================================*/
+.product-slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px;
+}
+
+.product-slider-heading {
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #333;
+    text-align: center;
+    margin: 0px;
+}
+
+.product-box {
+    display: flex;
+    flex-direction: column;
+    inline-size: 300px;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 10px;
+    margin: 0 20px;
+}
+.p-img-container {
+    inline-size: 100%;
+    block-size: 100%;
+    display: flex;
+    overflow: hidden;
+}
+.p-img a,
+.p-img {
+    inline-size: 100%;
+    block-size: 300px;
+    display: flex;
+}
+.p-img a img {
+    inline-size: 100%;
+    block-size: 100%;
+    object-position: center;
+    object-fit: contain;
+    animation: fade .6s;
+}
+
+.p-img-back {
+    display: none;
+}
+.p-img-container:hover .p-img-back {
+    display: block;
+}
+.p-img-container:hover .p-img-front {
+    display: none;
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.p-box-text {
+    margin-top: 5px;
+    inline-size: 100%;
+}
+.prodcut-category {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.prodcut-category span {
+    color: #acacac;
+    font-size: .9rem;
+    margin: 5px 0px;
+}
+.product-title {
+    color: #333;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 400ms ease;
+}
+.product-title:hover {
+    color: #1111;
+    opacity: .7;
+    transition: all ease ,3s;
+}
+.price-buy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+.price-buy .p-price {
+    font-size: 1.3rem;
+    color: #333;
+    font-weight: 700;
+}
+.price-buy .p-buy-btn {
+    color: #e63b3b;
+    margin: 0px 5px;
+    font-weight: 600;
+}
+.price-buy .p-buy-btn:hover {
+    text-decoration: underline;
+}

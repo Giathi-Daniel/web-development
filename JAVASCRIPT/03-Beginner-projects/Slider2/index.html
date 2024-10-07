@@ -1,0 +1,100 @@
+  <!--doctype html-->
+  <html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--==Title==================================-->
+    <title>Product Slider HTML - Website</title>
+    <!--==CSS====================================-->
+    <link rel="stylesheet" href="styles.css"/>
+    <!--==Poppins-Font===========================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--==CSS-Swiper==============================-->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+    </head>
+    <body>
+       <!--==Slider============================================-->
+       <section class="product-slider">
+        <h4 class="product-slider-heading">Product Slider</h4>
+        <div class="product-box">
+            <div class="p-img-container">
+                <div class="p-img">
+                    <a href="#">
+                        <img src="images/img1.png" class="p-img-front" alt="">
+                        <img src="images/img1.png" class="p-img-back" alt="">
+                    </a>
+                </div>
+            </div>
+            <!-- text -->
+             <div class="p-box-text">
+                <div class="product-category">
+                    <span>MotorBike</span>
+                </div>
+                <a href="#" class="product-title">Lorem Ipsum</a>
+                <div class="price-buy">
+                    <span class="p-price">1200$</span>
+                    <a href="#" class="p-buy-btn">Buy Now</a>
+                </div>
+             </div>
+        </div>
+        <div class="slider-btns">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        </section>
+        <!--slider-end-------->
+
+
+         <!--==JS-Swiper====================================-->
+         <script src="js/swiper-bundle.min.js"></script>
+         <!--==script=======================================-->
+         <script>
+             /*Initialize Swiper*/
+            var swiper = new Swiper(".mySwiper", {
+              slidesPerView: 1,
+              spaceBetween: 10,
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+              autoplay: {
+              delay: 6000,
+              disableOnInteraction: false,
+            },
+              navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+              breakpoints: {
+                360: {
+                  slidesPerView: 1.5,
+                  spaceBetween: 20,
+                },
+                540: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                1200: {
+                  slidesPerView: 4,
+                  spaceBetween: 40,
+                },
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 20,
+                },
+              },
+            });
+         </script>
+    </body>
+    </html>
+
+
+
+    <!-- <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
