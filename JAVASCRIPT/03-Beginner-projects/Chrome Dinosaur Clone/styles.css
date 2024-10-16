@@ -1,0 +1,59 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    user-select: none;
+  }
+  
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-block-size: 100vh;
+  }
+  
+  .world {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .score {
+    position: absolute;
+    font-size: 3vmin;
+    inset-inline-end: 1vmin;
+    inset-block-start: 1vmin;
+  }
+  
+  .start-screen {
+    position: absolute;
+    font-size: 5vmin;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .ground {
+    --left: 0;
+    position: absolute;
+    inline-size: 300%;
+    inset-block-end: 0;
+    inset-inline-start: calc(var(--left) * 1%)
+  }
+  
+  .dino {
+    --bottom: 0;
+    position: absolute;
+    inset-inline-start: 1%;
+    block-size: 30%;
+    inset-block-end: calc(var(--bottom) * 1%);
+  }
+  
+  .cactus {
+    position: absolute;
+    inset-inline-start: calc(var(--left) * 1%);
+    block-size: 30%;
+    inset-block-end: 0;
+  }
