@@ -9,3 +9,12 @@ class Person:
         
 details1 = Person("Kamaa", 30)
 details1.displayInfo()
+
+# del Person -> delete class
+# details1 = Person("Muray", 50)
+
+# del details1 -> delete object
+# details1.name
+
+# del details1.nationality -> delete attribute
+# details1.displayInfo()
