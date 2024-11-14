@@ -1,1 +1,1 @@
-![preview]("./mysite/weatherapp/images/preview.png")
+![preview](/mysite/weatherapp/images/preview.png)
