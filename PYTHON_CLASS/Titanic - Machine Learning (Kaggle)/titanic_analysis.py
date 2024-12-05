@@ -15,6 +15,8 @@ print(train.head())
 print(train.describe())
 print(train.info())
 
+
+
 # Data visualization
 sns.countplot(x='Survived', data=train)
 plt.title('Survival Count')
